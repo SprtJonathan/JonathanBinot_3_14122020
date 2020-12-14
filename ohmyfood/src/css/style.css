@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/* Import des polices utilisées pour le site web */
+/* Shrikhand */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* Code principal du site web */
+/* Variables des éléments graphiques du site */
+/* Mixins du site */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  margin: 0px;
+  max-width: 100vw;
+  overflow-x: hidden;
+  /*background-color: rgb(238, 238, 238);*/
+}
+
+header {
+  display: block;
+  z-index: 0;
+  height: 5%;
+  box-shadow: 3px 4px 5px 1px #dfdfdf;
+  background-color: white;
+}
+header .website-logo {
+  display: block;
+  padding: 7% 5% 3% 5%;
+  width: 50%;
+  margin: auto;
+}
+
+section.user-location {
+  display: flex;
+  z-index: 10;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #e6e6e6;
+}
+section.user-location p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(30, 30, 30, 0.8);
+  padding: 0.2rem;
+  margin-left: 5px;
+}
+
+section.explore-restaurant {
+  display: flex;
+  flex-direction: column;
+  padding: 15% 5%;
+  background-color: whitesmoke;
+}
+section.explore-restaurant h1 {
+  padding: 0% 5%;
+  font-size: 23px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+section.explore-restaurant p {
+  font-size: 16px;
+  text-align: center;
+  padding: 0%;
+}
+section.explore-restaurant a {
+  display: inline;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  padding: 15px 20px;
+  border-radius: 50px;
+  margin: auto;
+  box-shadow: 3px 4px 5px 1px #dfdfdf;
+}
+
+section.how-to {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+}
+section.how-to .steps-title {
+  font-size: 25px;
+}
+section.how-to .step {
+  display: flex;
+  flex-direction: row;
+  padding: 5% 5% 2% 0%;
+  border-radius: 20px;
+  box-shadow: 3px 4px 5px 1px #dfdfdf;
+  margin: 5%;
+  background-color: whitesmoke;
+}
+section.how-to .step .step-number {
+  color: white;
+  background-color: #9356dc;
+  padding: 5px 9px;
+  margin: 5% 0% 5% -5%;
+  border-radius: 50%;
+}
+section.how-to .step .step-icon {
+  color: #646464;
+  font-size: 15px;
+  margin-left: 15px;
+}
+section.how-to .step .step-text {
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+section#restaurants-choice {
+  background-color: white-smoke;
+  margin: 5%;
+}
+section#restaurants-choice .restaurants-title {
+  font-size: 25px;
+}
+section#restaurants-choice .restaurant-block {
+  display: flex;
+  width: 100vw;
+}
+
+/*# sourceMappingURL=style.css.map */
