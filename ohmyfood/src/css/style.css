@@ -1,12 +1,16 @@
 @charset "UTF-8";
-/* Import des polices utilisées pour le site web */
-/* Shrikhand */
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-/* Roboto */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-/* Code principal du site web */
 /* Variables des éléments graphiques du site */
 /* Mixins du site */
+/*@import "./utils/functions";
+@import "./utils/extensions";
+@import "./base/base";
+@import "./base/typography";
+@import "./components/buttons";
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/container";
+@import "./layouts/form";*/
+/* Code principal du site web */
 html {
   overflow-x: hidden;
 }
@@ -68,7 +72,8 @@ section.explore-restaurant p {
   text-align: center;
   padding: 0%;
 }
-section.explore-restaurant a {
+
+a {
   display: inline;
   color: white;
   font-size: 16px;
@@ -127,5 +132,8 @@ section#restaurants-choice .restaurant-block {
   display: flex;
   width: 100vw;
 }
+
+/*@import "./pages/about";
+@import "./pages/project";*/
 
 /*# sourceMappingURL=style.css.map */
