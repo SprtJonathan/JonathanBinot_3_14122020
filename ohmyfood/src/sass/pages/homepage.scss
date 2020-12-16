@@ -68,7 +68,7 @@ html {
     color: white;
     font-size: 16px;
     text-decoration: none;
-    background-image: linear-gradient($secondary-color, $primary-color);
+    background-image: linear-gradient(90deg, $secondary-color, $primary-color);
     padding: 15px 20px;
     border-radius: 50px;
     margin: auto;
@@ -114,8 +114,7 @@ html {
   }
   
   section#restaurants-choice {
-    background-color: white-smoke;
-    margin: 5%;
+    background-color: whitesmoke;
     .restaurants-title {
       @include title-style;
     }
@@ -123,7 +122,15 @@ html {
     .restaurant-block
     {
       display: flex;
-      width: 100vw;
+      flex-direction: column;
+      margin: auto;
+      width: 90vw;
+      background-color: white;
+      border-radius: 15px;
+      img {
+        width: 90vw;
+        border-radius: 15px 15px 0px 0px;
+      }
     }
   }
   
