@@ -1,6 +1,10 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./base/fonts";
+@import "./base/footer";
+@import "./base/buttons";
+@import "./base/common-html-body-header";
+@import "./base/text-decoration";
 /*@import "./utils/functions";
 @import "./utils/extensions";
 @import "./base/base";
@@ -11,5 +15,7 @@
 @import "./layouts/container";
 @import "./layouts/form";*/
 @import "./pages/homepage";
+@import "./pages/menus";
+@import "./pages/menus-images";
 /*@import "./pages/about";
 @import "./pages/project";*/

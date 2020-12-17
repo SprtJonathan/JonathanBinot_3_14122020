@@ -1,34 +1,5 @@
-/* Code principal du site web */
-
-html {
-  overflow-x: hidden;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  margin: 0px;
-  max-width: 100vw;
-  overflow-x: hidden;
-  /*background-color: rgb(238, 238, 238);*/
-}
-
-header {
-  display: block;
-  z-index: 0;
-  height: 5%;
-  @include elements-shadow;
-  background-color: white;
-  .website-logo {
-    display: block;
-    padding: 7% 5% 3% 5%;
-    width: 50%;
-    margin: auto;
-  }
-}
-
-section.user-location {
+/* Code spécifique à la page d'accueil */
+#user-location {
   display: flex;
   z-index: 10;
   flex-direction: row;
@@ -43,7 +14,7 @@ section.user-location {
   }
 }
 
-section.explore-restaurant {
+#explore-restaurant {
   display: flex;
   flex-direction: column;
   padding: 15% 5%;
@@ -63,25 +34,11 @@ section.explore-restaurant {
   }
 }
 
-a.button {
-  display: inline;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  text-decoration: none;
-  background-image: linear-gradient(170deg, $secondary-color, $primary-color);
-  padding: 15px 20px;
-  border-radius: 50px;
-  margin: auto;
-  @include elements-shadow;
-}
-
 a.restaurant-page {
   text-decoration: none;
 }
 
-section.how-to {
+#how-to {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -120,9 +77,8 @@ section.how-to {
   }
 }
 
-
 /* Style de la section comprenant les restaurants disponibles */
-section#restaurants-choice {
+#restaurants-choice {
   background-color: whitesmoke;
   padding-bottom: 15%;
   .restaurants-title {
@@ -188,26 +144,5 @@ section#restaurants-choice {
         color: black;
       }
     }
-  }
-}
-
-footer {
-  background-color: rgb(60, 60, 60);
-  color: white;
-  padding-bottom: 20px;
-  h2 {
-    font-family: "Shrikhand", cursive;
-    font-weight: 400;
-    font-size: 18px;
-    width: 90vw;
-    margin: auto;
-    padding: 5% 0% 1%;
-  }
-  div {
-    width: 90vw;
-    font-size: 15px;
-    font-weight: 0;
-    margin: auto;
-    margin-top: 0px;
   }
 }
