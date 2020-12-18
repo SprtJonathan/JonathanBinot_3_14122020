@@ -104,15 +104,15 @@ a.restaurant-page {
       border-radius: 15px 15px 0px 0px;
     }
     .restaurant-new {
-      position: static;
-      top: 0px;
-      right: 0px;
+      position: relative;
+      top: -140px;
+      right: -65%;
       background-color: $terciary-color;
       color: green;
       font-size: 15px;
-      border-radius: 2px;
+      border-radius: 3px;
       padding: 0px;
-      @include elements-shadow;
+      width: fit-content;
       p {
         padding: 0px 10px;
         margin: 5px;

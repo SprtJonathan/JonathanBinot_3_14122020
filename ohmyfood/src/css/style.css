@@ -196,15 +196,15 @@ a.restaurant-page {
   border-radius: 15px 15px 0px 0px;
 }
 #restaurants-choice .restaurant-block .restaurant-new {
-  position: static;
-  top: 0px;
-  right: 0px;
+  position: relative;
+  top: -140px;
+  right: -65%;
   background-color: #99e2d0;
   color: green;
   font-size: 15px;
-  border-radius: 2px;
+  border-radius: 3px;
   padding: 0px;
-  box-shadow: 3px 4px 5px 1px #dfdfdf;
+  width: fit-content;
 }
 #restaurants-choice .restaurant-block .restaurant-new p {
   padding: 0px 10px;
