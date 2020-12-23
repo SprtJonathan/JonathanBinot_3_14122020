@@ -1,0 +1,109 @@
+$prog-bar-dur: 2000ms;
+$prog-bar-delay: 150ms;
+$loading-screen-delay: $prog-bar-dur + $prog-bar-delay*2; 
+
+@keyframes loading-screen-anim {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loading-text {
+  0% {
+    content: " ";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  99% {
+    content: "...";
+  }
+}
+
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+    opacity: 0.1;
+    border-radius: 5555px;
+  }
+  17% {
+    transform: scaleX(0.1);
+  }
+  24% {
+    transform: scaleX(0.55);
+  }
+  46% {
+    transform: scaleX(0.81);
+  }
+  85%,
+  100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.delay-seconds {
+  animation-delay: 1s;
+}
+.delay-seconds {
+  animation-delay: 1000ms;
+}
+
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 80;
+  background-color: white;
+  width: 100vw;
+  height: 100%;
+  animation: loading-screen-anim 500ms $loading-screen-delay both;
+  .loading-text {
+    &::after
+    { 
+      animation : loading-text 1000ms 3;
+      content: "";
+    }
+  }
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  border-radius: 255px;
+  width: 90%;
+  height: 5%;
+  h2{
+    width: fit-content;
+    text-align: center;
+    color: white;
+    font-family: "Shrikhand";
+    font-size: 25px;
+    font-weight: 200;
+    margin: auto;
+    position: fixed;
+    z-index: 20;
+  }
+  &__bar {
+    transform-origin: left;
+    transform: scaleX(0.5);
+    animation: progress-bar $prog-bar-dur $prog-bar-delay both;
+    z-index: 10;
+    background : linear-gradient(170deg, #ff79da, #9356dc);
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;    
+  }
+}
