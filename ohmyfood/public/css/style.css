@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /* Variables des éléments graphiques du site */
+/* Animation variables */
+/* Size variables */
 /* Mixins du site */
 /* Import des polices utilisées pour le site web */
 /* Shrikhand */
@@ -81,50 +83,6 @@ header .return-home {
   border-bottom: 3px solid #99e2d0;
 }
 
-@keyframes loading-screen-anim {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes loading-text {
-  0% {
-    content: " ";
-  }
-  33% {
-    content: ".";
-  }
-  66% {
-    content: "..";
-  }
-  99% {
-    content: "...";
-  }
-}
-@keyframes progress-bar {
-  0% {
-    transform: scaleX(0);
-    opacity: 0.1;
-    border-radius: 5555px;
-  }
-  17% {
-    transform: scaleX(0.1);
-  }
-  24% {
-    transform: scaleX(0.55);
-  }
-  46% {
-    transform: scaleX(0.81);
-  }
-  85%, 100% {
-    opacity: 1;
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
 .delay-seconds {
   animation-delay: 1s;
 }
@@ -180,6 +138,51 @@ header .return-home {
   border-radius: 25px;
 }
 
+@keyframes loading-screen-anim {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loading-text {
+  0% {
+    content: " ";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  99% {
+    content: "...";
+  }
+}
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+    opacity: 0.1;
+    border-radius: 5555px;
+  }
+  17% {
+    transform: scaleX(0.1);
+  }
+  24% {
+    transform: scaleX(0.55);
+  }
+  46% {
+    transform: scaleX(0.81);
+  }
+  85%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 /*@import "./utils/functions";
 @import "./utils/extensions";
 @import "./base/base";
@@ -278,6 +281,7 @@ a.restaurant-page {
 }
 #restaurants-choice .restaurant-block {
   display: flex;
+  position: relative;
   flex-direction: column;
   margin: auto;
   margin-bottom: 5%;
@@ -287,7 +291,6 @@ a.restaurant-page {
   border-radius: 15px;
 }
 #restaurants-choice .restaurant-block img {
-  position: relative;
   object-fit: cover;
   object-position: 50% -20px;
   width: 90vw;
@@ -295,14 +298,15 @@ a.restaurant-page {
   border-radius: 15px 15px 0px 0px;
 }
 #restaurants-choice .restaurant-block .restaurant-new {
-  position: relative;
-  top: -140px;
-  right: -65%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   background-color: #99e2d0;
   color: green;
   font-size: 15px;
   border-radius: 3px;
   padding: 0px;
+  margin: 0px;
   width: fit-content;
 }
 #restaurants-choice .restaurant-block .restaurant-new p {
@@ -318,6 +322,9 @@ a.restaurant-page {
   margin: 0% 5%;
   color: black;
 }
+#restaurants-choice .restaurant-block .restaurant-details div {
+  position: relative;
+}
 #restaurants-choice .restaurant-block .restaurant-details div h3 {
   font-size: 18px;
   font-weight: 700;
@@ -328,10 +335,19 @@ a.restaurant-page {
   font-weight: 300;
   line-height: 5px;
 }
-#restaurants-choice .restaurant-block .restaurant-details i {
+#restaurants-choice .restaurant-block .restaurant-details .heart {
+  position: absolute;
   font-size: 25px;
-  font-weight: 400;
-  color: black;
+  font-weight: 100;
+  left: 85%;
+}
+#restaurants-choice .restaurant-block .restaurant-details .heart::before {
+  font-family: "FontAwesome";
+  content: "";
+}
+#restaurants-choice .restaurant-block .restaurant-details .heart:hover {
+  color: #9356dc;
+  transition: all 500ms;
 }
 
 .menu {
@@ -380,13 +396,18 @@ a.restaurant-page {
   margin: 0% 5% 7% 2%;
 }
 #menu-categories .menu-block {
+  position: relative;
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
   background-color: white;
-  margin-top: 5%;
-  margin-bottom: 5%;
   border-radius: 15px;
   padding: 0% 5%;
+  height: 70px;
+  width: 85vw;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
   box-shadow: 3px 4px 5px 1px #dfdfdf;
 }
 #menu-categories .menu-block h3 {
@@ -396,6 +417,36 @@ a.restaurant-page {
 #menu-categories .menu-block .description-price {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  transition: ease 500ms;
+}
+#menu-categories .menu-block .description-price .description {
+  text-overflow: ellipsis;
+}
+#menu-categories .menu-block .checkbox {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #99e2d0;
+  color: white;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+  border-radius: 0px 15px 15px 0px;
+  z-index: 5;
+}
+#menu-categories .menu-block:hover .checkbox {
+  width: 52.5px;
+  left: 82.9%;
+}
+#menu-categories .menu-block:hover .description-price {
+  width: 80%;
+  transition: ease 500ms;
 }
 
 .order-button {

@@ -2,3 +2,13 @@
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $terciary-color: #99e2d0;
+
+$linear-grd-prisec: linear-gradient($primary-color, $secondary-color);
+
+/* Animation variables */
+$prog-bar-dur: 2000ms;
+$prog-bar-delay: 150ms;
+$loading-screen-delay: $prog-bar-dur + $prog-bar-delay*2; 
+
+/* Size variables */
+$menu-food-size: 70px
