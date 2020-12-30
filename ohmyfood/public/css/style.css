@@ -7,7 +7,7 @@
 /* Shrikhand */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* Roboto */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 footer {
   background-color: #3c3c3c;
   color: white;
@@ -37,7 +37,7 @@ a.button {
   font-weight: 500;
   text-decoration: none;
   background-image: linear-gradient(170deg, #ff79da, #9356dc);
-  padding: 15px 20%;
+  padding: 15px 6%;
   border-radius: 50px;
   margin: auto;
   box-shadow: 3px 4px 5px 1px #dfdfdf;
@@ -104,10 +104,6 @@ header .return-home {
   height: 100%;
   animation: loading-screen-anim 500ms 2300ms both;
 }
-.loading-screen .loading-text::after {
-  animation: loading-text 1000ms 3;
-  content: "";
-}
 
 .progress {
   display: flex;
@@ -147,40 +143,23 @@ header .return-home {
     z-index: -1;
   }
 }
-@keyframes loading-text {
+@keyframes spinner-rotation {
   0% {
-    content: " ";
+    transform: rotate(20deg);
   }
-  33% {
-    content: ".";
-  }
-  66% {
-    content: "..";
-  }
-  99% {
-    content: "...";
-  }
-}
-@keyframes progress-bar {
-  0% {
-    transform: scaleX(0);
-    opacity: 0.1;
-    border-radius: 5555px;
-  }
-  17% {
-    transform: scaleX(0.1);
-  }
-  24% {
-    transform: scaleX(0.55);
-  }
-  46% {
-    transform: scaleX(0.81);
-  }
-  85%, 100% {
-    opacity: 1;
+  90% {
+    transform: rotate(350deg);
   }
   100% {
-    transform: scaleX(1);
+    transform: rotate(360deg);
+  }
+}
+@keyframes progrssive-spawn {
+  0% {
+    transform: translateY(-2);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 /*@import "./utils/functions";
@@ -193,11 +172,32 @@ header .return-home {
 @import "./layouts/container";
 @import "./layouts/form";*/
 /* Code spécifique à la page d'accueil */
+.loading-spinner {
+  display: flex;
+  height: 10vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  height: 10vw;
+  width: 10vw;
+  border: 5px solid #9356dc;
+  border-top-color: #ff79da;
+  border-radius: 100%;
+  animation: spinner-rotation 0.6s infinite ease 0.25s;
+}
+
+.loading-logo {
+  font-family: "Shrikhand";
+}
+
 #user-location {
   display: flex;
   z-index: 10;
   flex-direction: row;
   justify-content: center;
+  padding-right: 35px;
   background-color: #e6e6e6;
 }
 #user-location p {
@@ -223,6 +223,7 @@ header .return-home {
 }
 #explore-restaurant p {
   font-size: 16px;
+  font-weight: 300;
   text-align: center;
   padding: 0%;
 }
@@ -231,6 +232,7 @@ a.restaurant-page {
   text-decoration: none;
 }
 
+/* Style des blocs montrant les étapes de sélection */
 #how-to {
   background-color: white;
   display: flex;
@@ -250,6 +252,12 @@ a.restaurant-page {
   margin: 8%;
   margin-bottom: 2%;
   background-color: whitesmoke;
+}
+#how-to .step:hover {
+  background-color: #f2eafb;
+}
+#how-to .step:hover > .step-icon {
+  color: #9356dc;
 }
 #how-to .step .step-number {
   color: white;
@@ -289,6 +297,7 @@ a.restaurant-page {
   width: 90vw;
   background-color: white;
   border-radius: 15px;
+  animation: progressive-spawn 2000ms 5s both;
 }
 #restaurants-choice .restaurant-block img {
   object-fit: cover;
@@ -350,6 +359,77 @@ a.restaurant-page {
   transition: all 500ms;
 }
 
+/* Fin du scss principal des pages de menus. Résolution minimale : 320px */
+@media (min-width: 375px) {
+  #user-location {
+    padding-right: 65px;
+  }
+
+  #explore-restaurant {
+    padding: 10% 5%;
+  }
+  #explore-restaurant h1 {
+    padding: 0% 10%;
+  }
+
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    margin-bottom: 15%;
+  }
+  #how-to .step {
+    padding: 2% 2% 2% 0%;
+    margin-bottom: 1%;
+  }
+  #how-to .step .step-icon {
+    color: #646464;
+    font-size: 16px;
+    margin-left: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  #how-to .step .step-text {
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+@media (min-width: 425px) {
+  #user-location {
+    padding-right: 65px;
+  }
+
+  #explore-restaurant {
+    padding: 10% 5%;
+  }
+  #explore-restaurant h1 {
+    padding: 0% 10%;
+  }
+
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    margin-bottom: 15%;
+  }
+  #how-to .step {
+    padding: 2% 2% 2% 0%;
+    margin-bottom: 1%;
+  }
+  #how-to .step .step-icon {
+    color: #646464;
+    font-size: 16px;
+    margin-left: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  #how-to .step .step-text {
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
 .menu {
   margin: 0%;
   width: 100vw;
@@ -393,7 +473,7 @@ a.restaurant-page {
   font-family: "Roboto Light", sans-serif;
   font-size: 17px;
   padding-top: 5%;
-  margin: 0% 5% 7% 2%;
+  margin: 0% 5% 7% 4%;
 }
 #menu-categories .menu-block {
   position: relative;
@@ -403,15 +483,16 @@ a.restaurant-page {
   background-color: white;
   border-radius: 15px;
   padding: 0% 5%;
-  height: 70px;
+  height: fit-content;
   width: 85vw;
   margin: auto;
   margin-top: 5%;
   margin-bottom: 5%;
+  animation: progressive-spawn 500ms 2300ms both;
   box-shadow: 3px 4px 5px 1px #dfdfdf;
 }
 #menu-categories .menu-block h3 {
-  margin-bottom: 0px;
+  margin: 12px 19% 0px 0px;
   margin-right: 19%;
 }
 #menu-categories .menu-block .description-price {
@@ -419,6 +500,9 @@ a.restaurant-page {
   justify-content: space-between;
   width: 100%;
   transition: ease 500ms;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  line-height: 5px;
 }
 #menu-categories .menu-block .description-price .description {
   text-overflow: ellipsis;
@@ -441,8 +525,8 @@ a.restaurant-page {
   z-index: 5;
 }
 #menu-categories .menu-block:hover .checkbox {
-  width: 52.5px;
-  left: 82.9%;
+  width: 48.75px;
+  left: 83.9%;
 }
 #menu-categories .menu-block:hover .description-price {
   width: 80%;
@@ -457,6 +541,7 @@ a.restaurant-page {
   background-color: whitesmoke;
 }
 
+/* Fin du scss principal des pages de menus. Résolution minimale : 320px */
 .menu.alf {
   background-image: url("../../public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }

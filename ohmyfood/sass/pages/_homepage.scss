@@ -1,10 +1,31 @@
 /* Code spécifique à la page d'accueil */
 
+.loading-spinner {
+  display: flex;
+  height: 10vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  height: 10vw;
+  width: 10vw;
+  border: 5px solid $primary-color;
+  border-top-color: $secondary-color;
+  border-radius: 100%;
+  animation: spinner-rotation 0.6s infinite ease 0.25s;
+}
+
+.loading-logo {
+  font-family: "Shrikhand";
+}
+
 #user-location {
   display: flex;
   z-index: 10;
   flex-direction: row;
   justify-content: center;
+  padding-right: 35px;
   background-color: rgb(230, 230, 230);
   p {
     font-size: 0.9rem;
@@ -30,6 +51,7 @@
 
   p {
     font-size: 16px;
+    font-weight: 300;
     text-align: center;
     padding: 0%;
   }
@@ -39,6 +61,7 @@ a.restaurant-page {
   text-decoration: none;
 }
 
+/* Style des blocs montrant les étapes de sélection */
 #how-to {
   background-color: white;
   display: flex;
@@ -56,6 +79,14 @@ a.restaurant-page {
     margin: 8%;
     margin-bottom: 2%;
     background-color: whitesmoke;
+
+    &:hover {
+      background-color: lighten($color: $primary-color, $amount: 35);
+    }
+
+    &:hover > .step-icon {
+      color: $primary-color;
+    }
     .step-number {
       color: white;
       background-color: $primary-color;
@@ -97,6 +128,7 @@ a.restaurant-page {
     width: 90vw;
     background-color: white;
     border-radius: 15px;
+    animation: progressive-spawn $prog-bar-dur 5s both;
     img {
       object-fit: cover;
       object-position: 50% -20px;
@@ -154,6 +186,81 @@ a.restaurant-page {
           color: $primary-color;
           transition: all 500ms;
         }
+      }
+    }
+  }
+}
+
+/* Fin du scss principal des pages de menus. Résolution minimale : 320px */
+@media (min-width: 375px) {
+  #user-location {
+    padding-right: 65px;
+  }
+
+  #explore-restaurant {
+    padding: 10% 5%;
+    h1 {
+      padding: 0% 10%;
+    }
+  }
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    margin-bottom: 15%;
+    .step {
+      padding: 2% 2% 2% 0%;
+      margin-bottom: 1%;
+
+      .step-icon {
+        color: rgb(100, 100, 100);
+        font-size: 16px;
+        margin-left: 15px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .step-text {
+        font-size: 15px;
+        font-weight: 600;
+        margin-left: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  #user-location {
+    padding-right: 65px;
+  }
+
+  #explore-restaurant {
+    padding: 10% 5%;
+    h1 {
+      padding: 0% 10%;
+    }
+  }
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    margin-bottom: 15%;
+    .step {
+      padding: 2% 2% 2% 0%;
+      margin-bottom: 1%;
+
+      .step-icon {
+        color: rgb(100, 100, 100);
+        font-size: 16px;
+        margin-left: 15px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .step-text {
+        font-size: 15px;
+        font-weight: 600;
+        margin-left: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
       }
     }
   }
