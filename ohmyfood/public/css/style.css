@@ -40,9 +40,15 @@ a.button {
   padding: 15px 6%;
   border-radius: 50px;
   margin: auto;
+  margin-top: 15px;
   box-shadow: 3px 4px 5px 1px #dfdfdf;
 }
 
+@media (min-width: 425px) {
+  a.button {
+    padding: 15px 18px;
+  }
+}
 html {
   overflow-x: hidden;
 }
@@ -252,12 +258,15 @@ a.restaurant-page {
   margin: 8%;
   margin-bottom: 2%;
   background-color: whitesmoke;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 300ms;
 }
 #how-to .step:hover {
   background-color: #f2eafb;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 300ms;
 }
 #how-to .step:hover > .step-icon {
   color: #9356dc;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 300ms;
 }
 #how-to .step .step-number {
   color: white;
@@ -298,13 +307,25 @@ a.restaurant-page {
   background-color: white;
   border-radius: 15px;
   animation: progressive-spawn 2000ms 5s both;
+  /* Positionnement des images des restaurants */
 }
 #restaurants-choice .restaurant-block img {
   object-fit: cover;
-  object-position: 50% -20px;
   width: 90vw;
   height: 150px;
   border-radius: 15px 15px 0px 0px;
+}
+#restaurants-choice .restaurant-block .image-lpdg {
+  object-position: 50% bottom;
+}
+#restaurants-choice .restaurant-block .image-lne {
+  object-position: 50% 60%;
+}
+#restaurants-choice .restaurant-block .image-alf {
+  object-position: 50% bottom;
+}
+#restaurants-choice .restaurant-block .image-ldds {
+  object-position: 50% bottom;
 }
 #restaurants-choice .restaurant-block .restaurant-new {
   position: absolute;
@@ -359,10 +380,10 @@ a.restaurant-page {
   transition: all 500ms;
 }
 
-/* Fin du scss principal des pages de menus. Résolution minimale : 320px */
+/* Résolution minimale : 375px */
 @media (min-width: 375px) {
   #user-location {
-    padding-right: 65px;
+    padding-right: 125px;
   }
 
   #explore-restaurant {
@@ -393,6 +414,10 @@ a.restaurant-page {
     margin-left: 20px;
     margin-top: auto;
     margin-bottom: auto;
+  }
+
+  #restaurants-choice .restaurant-block img {
+    height: 175px;
   }
 }
 @media (min-width: 425px) {
@@ -401,7 +426,7 @@ a.restaurant-page {
   }
 
   #explore-restaurant {
-    padding: 10% 5%;
+    padding: 10% 15%;
   }
   #explore-restaurant h1 {
     padding: 0% 10%;
@@ -428,6 +453,49 @@ a.restaurant-page {
     margin-left: 20px;
     margin-top: auto;
     margin-bottom: auto;
+  }
+
+  #restaurants-choice .restaurant-block img {
+    height: 200px;
+  }
+}
+/* Format tablette */
+@media (min-width: 768px) {
+  .spinner {
+    border: 15px solid #9356dc;
+    border-top-color: #ff79da;
+  }
+
+  .loading-logo {
+    font-size: 35px;
+  }
+
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  #how-to .steps-title {
+    font-size: 23px;
+    margin: 15% 5% 2%;
+    padding-left: 25%;
+    padding-right: 25%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  #how-to .step {
+    position: relative;
+    padding: 3% 2% 3% 0%;
+    margin: auto;
+    margin-bottom: 2%;
+  }
+  #how-to .step .step-number {
+    position: absolute;
+    left: 50%;
+    top: -25px;
   }
 }
 .menu {
