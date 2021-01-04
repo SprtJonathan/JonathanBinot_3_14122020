@@ -31,3 +31,35 @@ header {
     color: black;
   }
 }
+
+@media (min-width: 768px) {
+  body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    margin: 0px;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  header {
+    display: block;
+    z-index: 0;
+    height: 5%;
+    @include elements-shadow;
+    background-color: white;
+    .website-logo {
+      display: block;
+      padding: 25px 20px 15px 20px;
+      height: 50px;
+      margin: auto;
+    }
+    .return-home {
+      position: absolute;
+      top: 2.7%;
+      left: 20px;
+      font-size: 18px;
+      color: black;
+    }
+  }
+}

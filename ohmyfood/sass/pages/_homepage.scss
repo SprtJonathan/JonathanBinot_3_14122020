@@ -298,24 +298,32 @@ a.restaurant-page {
 
 /* Format tablette */
 @media (min-width: 768px) {
-  .spinner {    
+  .spinner {
     border: 15px solid $primary-color;
     border-top-color: $secondary-color;
   }
   .loading-logo {
     font-size: 35px;
   }
+
+  #user-location {
+    p {
+      font-size: 1.4rem;
+    }
+  }
   /* Style des blocs montrant les étapes de sélection */
   #how-to {
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
+    margin-bottom: 35px;
+    padding-bottom: 0px;
     .steps-title {
       @include title-style;
       padding-left: 25%;
       padding-right: 25%;
       margin: auto;
-      margin-top: 15px;
+      margin-top: 25px;
       margin-bottom: 35px;
       text-align: center;
     }
@@ -323,12 +331,116 @@ a.restaurant-page {
       position: relative;
       padding: 3% 2% 3% 0%;
       margin: auto;
-      margin-bottom: 2%;
 
       .step-number {
         position: absolute;
         left: 50%;
         top: -25px;
+      }
+    }
+  }
+
+  /* Style de la section comprenant les restaurants disponibles */
+  #restaurants-choice {
+    background-color: whitesmoke;
+    padding-bottom: 15%;
+    margin-top: 0px;
+    padding-top: 0px;
+    .restaurants-title {
+      @include title-style;
+      padding: 5% 0% 5%;
+      margin-top: 0px;
+    }
+
+    .restaurant-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .restaurant-block {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      margin: auto;
+      margin-left: 6vw;
+      margin-right: 2vw;
+      margin-bottom: 5vw;
+      @include elements-shadow;
+      width: $restaurant-image-size-tab;
+      background-color: white;
+      border-radius: 15px;
+      animation: progressive-spawn $prog-bar-dur 5s both;
+      img {
+        object-fit: cover;
+        width: $restaurant-image-size-tab;
+        height: 150px;
+        border-radius: 15px 15px 0px 0px;
+      }
+      /* Positionnement des images des restaurants */
+      .image-lpdg {
+        object-position: 50% bottom;
+      }
+      .image-lne {
+        object-position: 50% 60%;
+      }
+      .image-alf {
+        object-position: 50% bottom;
+      }
+      .image-ldds {
+        object-position: 50% bottom;
+      }
+      .restaurant-new {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $terciary-color;
+        color: green;
+        font-size: 15px;
+        border-radius: 3px;
+        padding: 0px;
+        margin: 0px;
+        width: fit-content;
+        p {
+          padding: 0px 10px;
+          margin: 5px;
+          font-weight: 700;
+        }
+      }
+      .restaurant-details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0% 5%;
+        color: black;
+        div {
+          position: relative;
+          h3 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 15px;
+          }
+          p {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 5px;
+          }
+        }
+        .heart {
+          position: absolute;
+          font-size: 25px;
+          font-weight: 100;
+          left: 85%;
+          &::before {
+            font-family: "FontAwesome";
+            content: "\f004";
+          }
+          &:hover {
+            color: $primary-color;
+            transition: all 500ms;
+          }
+        }
       }
     }
   }
