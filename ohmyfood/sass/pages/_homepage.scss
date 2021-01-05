@@ -132,6 +132,9 @@ a.restaurant-page {
     background-color: white;
     border-radius: 15px;
     animation: progressive-spawn $prog-bar-dur 5s both;
+    &:hover {
+      @include elements-shadow-hover;
+    }
     img {
       object-fit: cover;
       width: 90vw;

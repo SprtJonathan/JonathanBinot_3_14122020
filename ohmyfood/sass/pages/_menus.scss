@@ -111,7 +111,26 @@
     background-color: whitesmoke;
 }
 
-/* Fin du scss principal des pages de menus. Résolution minimale : 320px */
+/* Fin du scss principal des pages de menus. Résolution minimale : 375px */
 @media (min-width: 375px) {
-    
+    #menu-categories {
+        .menu-block {
+            &:hover .checkbox {
+                width: $menu-food-size - $menu-food-size / 4;
+                left: 87%;
+            }
+        }
+    }
+}
+
+/* Fin du scss principal des pages de menus. Résolution minimale : 320px */
+@media (min-width: 425px) {
+    #menu-categories {
+        .menu-block {
+            &:hover .checkbox {
+                width: $menu-food-size - $menu-food-size / 4;
+                left: 88%;
+            }
+        }
+    }
 }

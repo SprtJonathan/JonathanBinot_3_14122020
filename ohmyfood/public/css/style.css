@@ -42,6 +42,7 @@ a.button {
   margin: auto;
   margin-top: 15px;
   box-shadow: 3px 4px 5px 1px #dfdfdf;
+  transition: ease 0.3s;
 }
 
 @media (min-width: 425px) {
@@ -67,6 +68,7 @@ header {
   z-index: 0;
   height: 5%;
   box-shadow: 3px 4px 5px 1px #dfdfdf;
+  transition: ease 0.3s;
   background-color: white;
 }
 header .website-logo {
@@ -98,6 +100,7 @@ header .return-home {
     z-index: 0;
     height: 5%;
     box-shadow: 3px 4px 5px 1px #dfdfdf;
+    transition: ease 0.3s;
     background-color: white;
   }
   header .website-logo {
@@ -286,6 +289,7 @@ a.restaurant-page {
   padding: 5% 5% 2% 0%;
   border-radius: 20px;
   box-shadow: 3px 4px 5px 1px #dfdfdf;
+  transition: ease 0.3s;
   margin: 8%;
   margin-bottom: 2%;
   background-color: whitesmoke;
@@ -334,11 +338,16 @@ a.restaurant-page {
   margin: auto;
   margin-bottom: 5%;
   box-shadow: 3px 4px 5px 1px #dfdfdf;
+  transition: ease 0.3s;
   width: 90vw;
   background-color: white;
   border-radius: 15px;
   animation: progressive-spawn 2000ms 5s both;
   /* Positionnement des images des restaurants */
+}
+#restaurants-choice .restaurant-block:hover {
+  box-shadow: 4px 5px 6px 2px #999999;
+  transition: ease 0.3s;
 }
 #restaurants-choice .restaurant-block img {
   object-fit: cover;
@@ -561,6 +570,7 @@ a.restaurant-page {
     margin-right: 2vw;
     margin-bottom: 5vw;
     box-shadow: 3px 4px 5px 1px #dfdfdf;
+    transition: ease 0.3s;
     width: 40vw;
     background-color: white;
     border-radius: 15px;
@@ -698,6 +708,7 @@ a.restaurant-page {
   margin-bottom: 5%;
   animation: progressive-spawn 500ms 2300ms both;
   box-shadow: 3px 4px 5px 1px #dfdfdf;
+  transition: ease 0.3s;
 }
 #menu-categories .menu-block h3 {
   margin: 12px 19% 0px 0px;
@@ -749,7 +760,20 @@ a.restaurant-page {
   background-color: whitesmoke;
 }
 
+/* Fin du scss principal des pages de menus. Résolution minimale : 375px */
+@media (min-width: 375px) {
+  #menu-categories .menu-block:hover .checkbox {
+    width: 48.75px;
+    left: 87%;
+  }
+}
 /* Fin du scss principal des pages de menus. Résolution minimale : 320px */
+@media (min-width: 425px) {
+  #menu-categories .menu-block:hover .checkbox {
+    width: 48.75px;
+    left: 88%;
+  }
+}
 .menu.alf {
   background-image: url("../../public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
