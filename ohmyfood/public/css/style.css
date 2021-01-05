@@ -44,6 +44,30 @@ a.button {
   box-shadow: 3px 4px 5px 1px #dfdfdf;
   transition: ease 0.3s;
 }
+a.button:hover {
+  box-shadow: 4px 5px 6px 2px #999999;
+  transition: ease 0.3s;
+}
+
+a.order-button {
+  display: inline;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  background-image: linear-gradient(170deg, #ff79da, #9356dc);
+  padding: 15px 7%;
+  border-radius: 50px;
+  margin: auto;
+  margin-top: 15px;
+  box-shadow: 3px 4px 5px 1px #dfdfdf;
+  transition: ease 0.3s;
+}
+a.order-button:hover {
+  box-shadow: 4px 5px 6px 2px #999999;
+  transition: ease 0.3s;
+}
 
 @media (min-width: 425px) {
   a.button {
@@ -71,10 +95,11 @@ header {
   transition: ease 0.3s;
   background-color: white;
 }
-header .website-logo {
-  display: block;
-  padding: 7% 5% 3% 5%;
-  width: 50%;
+header h1 {
+  font-family: "Shrikhand";
+  font-size: 35px;
+  text-align: center;
+  padding: 5% 3% 3% 3%;
   margin: auto;
 }
 header .return-home {
@@ -103,10 +128,9 @@ header .return-home {
     transition: ease 0.3s;
     background-color: white;
   }
-  header .website-logo {
-    display: block;
-    padding: 25px 20px 15px 20px;
-    height: 50px;
+  header h1 {
+    font-family: "Shrikhand";
+    font-size: 55px;
     margin: auto;
   }
   header .return-home {
@@ -194,11 +218,13 @@ header .return-home {
     transform: rotate(360deg);
   }
 }
-@keyframes progrssive-spawn {
+@keyframes slide-up {
   0% {
-    transform: translateY(-2);
+    opacity: 0;
+    transform: translateY(20px);
   }
   100% {
+    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -254,7 +280,7 @@ header .return-home {
   padding: 15% 5%;
   background-color: whitesmoke;
 }
-#explore-restaurant h1 {
+#explore-restaurant .purpose {
   padding: 0% 5%;
   font-size: 23px;
   text-align: center;
@@ -423,13 +449,16 @@ a.restaurant-page {
 /* Résolution minimale : 375px */
 @media (min-width: 375px) {
   #user-location {
-    padding-right: 125px;
+    padding-right: 50px;
+  }
+  #user-location p {
+    font-size: 18px;
   }
 
   #explore-restaurant {
     padding: 10% 5%;
   }
-  #explore-restaurant h1 {
+  #explore-restaurant .purpose {
     padding: 0% 10%;
   }
 
@@ -468,7 +497,7 @@ a.restaurant-page {
   #explore-restaurant {
     padding: 10% 15%;
   }
-  #explore-restaurant h1 {
+  #explore-restaurant .purpose {
     padding: 0% 10%;
   }
 
@@ -706,7 +735,7 @@ a.restaurant-page {
   margin: auto;
   margin-top: 5%;
   margin-bottom: 5%;
-  animation: progressive-spawn 500ms 2300ms both;
+  animation: slide-up 1s both;
   box-shadow: 3px 4px 5px 1px #dfdfdf;
   transition: ease 0.3s;
 }

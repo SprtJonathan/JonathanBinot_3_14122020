@@ -55,7 +55,7 @@
         margin: auto;
         margin-top: 5%;
         margin-bottom: 5%;
-        animation: progressive-spawn 500ms $loading-screen-delay both;
+        animation: slide-up 1s both;
         @include elements-shadow;
         h3 {
             margin: 12px 19% 0px 0px;

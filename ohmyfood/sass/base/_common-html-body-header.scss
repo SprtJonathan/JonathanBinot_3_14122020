@@ -17,10 +17,11 @@ header {
   height: 5%;
   @include elements-shadow;
   background-color: white;
-  .website-logo {
-    display: block;
-    padding: 7% 5% 3% 5%;
-    width: 50%;
+  h1 {
+    font-family: 'Shrikhand';
+    font-size: 35px;
+    text-align: center;
+    padding: 5% 3% 3% 3%;
     margin: auto;
   }
   .return-home {
@@ -48,10 +49,9 @@ header {
     height: 5%;
     @include elements-shadow;
     background-color: white;
-    .website-logo {
-      display: block;
-      padding: 25px 20px 15px 20px;
-      height: 50px;
+    h1 {
+      font-family: 'Shrikhand';
+      font-size: 55px;
       margin: auto;
     }
     .return-home {
