@@ -69,8 +69,14 @@
             padding-bottom: 0px;
             margin-bottom: 0px;
             line-height: 5px;
-            .description {
+            :nth-child(1) {
+                white-space: pre; 
                 text-overflow: ellipsis;
+                z-index: 2;
+            }
+            :nth-child(2) {
+                z-index: 3;
+                position: relative;
             }
         }
         .checkbox {
@@ -91,19 +97,10 @@
             border-radius: 0px 15px 15px 0px;
             z-index: 5;
         }
-          
-        &:hover .checkbox {
-            width: $menu-food-size - $menu-food-size / 4;
-            left: 83.9%;
-        }
-        &:hover .description-price {
-            width: 80%;
-            transition: ease 500ms;
-        }
     }
 }
 
-.order-button {
+.order-button-block {
     display: flex;
     justify-self: center;
     padding-top: 30px;
@@ -111,26 +108,3 @@
     background-color: whitesmoke;
 }
 
-/* Fin du scss principal des pages de menus. Résolution minimale : 375px */
-@media (min-width: 375px) {
-    #menu-categories {
-        .menu-block {
-            &:hover .checkbox {
-                width: $menu-food-size - $menu-food-size / 4;
-                left: 87%;
-            }
-        }
-    }
-}
-
-/* Fin du scss principal des pages de menus. Résolution minimale : 320px */
-@media (min-width: 425px) {
-    #menu-categories {
-        .menu-block {
-            &:hover .checkbox {
-                width: $menu-food-size - $menu-food-size / 4;
-                left: 88%;
-            }
-        }
-    }
-}

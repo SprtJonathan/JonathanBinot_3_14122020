@@ -1,20 +1,31 @@
 footer {
-    background-color: rgb(60, 60, 60);
-    color: white;
-    padding-bottom: 20px;
-    h2 {
-      font-family: "Shrikhand", cursive;
+  background-color: rgb(60, 60, 60);
+  color: white;
+  padding-bottom: 20px;
+  h2 {
+    font-family: "Shrikhand", cursive;
+    font-weight: 400;
+    font-size: 18px;
+    width: 90vw;
+    margin: auto;
+    padding: 5% 0% 1%;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    font-size: 15px;
+    font-weight: 0;
+    margin: auto;
+    a {
+      margin-bottom: 10px;
       font-weight: 400;
-      font-size: 18px;
-      width: 90vw;
-      margin: auto;
-      padding: 5% 0% 1%;
+      text-decoration: none;
+      color: white;
+      &:active {
+        color: $primary-color;
+        background-color: transparent;
+      }
     }
-    div {
-      width: 90vw;
-      font-size: 15px;
-      font-weight: 0;
-      margin: auto;
-      margin-top: 0px;
-    }
-}  
+  }
+}
