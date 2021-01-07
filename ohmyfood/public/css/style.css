@@ -493,19 +493,20 @@ a.restaurant-page {
   font-weight: 300;
   line-height: 5px;
 }
-#restaurants-choice .restaurant-block .restaurant-details .heart {
+#restaurants-choice .restaurant-block .restaurant-details i {
   position: absolute;
   font-size: 25px;
   font-weight: 100;
   left: 85%;
+  transition: ease 100ms;
 }
-#restaurants-choice .restaurant-block .restaurant-details .heart::before {
-  font-family: "FontAwesome";
-  content: "";
-}
-#restaurants-choice .restaurant-block .restaurant-details .heart:hover {
+#restaurants-choice .restaurant-block .restaurant-details i:hover {
   color: #9356dc;
-  transition: all 500ms;
+  background: linear-gradient(225deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: ease 100ms;
+  font-weight: 800;
 }
 
 /* Résolution minimale : 375px */
@@ -614,10 +615,11 @@ a.restaurant-page {
     padding-bottom: 0px;
   }
   #how-to .steps-title {
+    display: block;
     font-size: 23px;
     margin: 15% 5% 2%;
-    padding-left: 35vw;
-    padding-right: 35vw;
+    padding-left: 40vw;
+    padding-right: 40vw;
     margin: auto;
     margin-top: 25px;
     margin-bottom: 35px;
@@ -724,21 +726,8 @@ a.restaurant-page {
     font-weight: 300;
     line-height: 5px;
   }
-  #restaurants-choice .restaurant-block .restaurant-details .heart {
-    position: absolute;
-    font-size: 25px;
-    font-weight: 100;
-    left: 85%;
-  }
-  #restaurants-choice .restaurant-block .restaurant-details .heart::before {
-    font-family: "FontAwesome";
-    content: "";
-  }
-  #restaurants-choice .restaurant-block .restaurant-details .heart:hover {
-    color: #9356dc;
-    transition: all 500ms;
-  }
 }
+/* Format d'écran de taille minimale de 1024px */
 .menu {
   margin: 0%;
   width: 100vw;

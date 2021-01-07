@@ -191,18 +191,19 @@ a.restaurant-page {
           line-height: 5px;
         }
       }
-      .heart {
+      i {
         position: absolute;
         font-size: 25px;
         font-weight: 100;
         left: 85%;
-        &::before {
-          font-family: "FontAwesome";
-          content: "\f004";
-        }
+        transition: ease 100ms;
         &:hover {
           color: $primary-color;
-          transition: all 500ms;
+          background: linear-gradient(225deg, $primary-color, $secondary-color);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: ease 100ms;
+          font-weight: 800;
         }
       }
     }
@@ -213,7 +214,9 @@ a.restaurant-page {
 @media (min-width: 375px) {
   #user-location {
     padding-right: 50px;
-    p {font-size: 18px;}
+    p {
+      font-size: 18px;
+    }
   }
 
   #explore-restaurant {
@@ -323,9 +326,10 @@ a.restaurant-page {
     margin-bottom: 35px;
     padding-bottom: 0px;
     .steps-title {
+      display: block;
       @include title-style;
-      padding-left: 35vw;
-      padding-right: 35vw;
+      padding-left: 40vw;
+      padding-right: 40vw;
       margin: auto;
       margin-top: 25px;
       margin-bottom: 35px;
@@ -431,21 +435,12 @@ a.restaurant-page {
             line-height: 5px;
           }
         }
-        .heart {
-          position: absolute;
-          font-size: 25px;
-          font-weight: 100;
-          left: 85%;
-          &::before {
-            font-family: "FontAwesome";
-            content: "\f004";
-          }
-          &:hover {
-            color: $primary-color;
-            transition: all 500ms;
-          }
-        }
       }
     }
   }
+}
+
+/* Format d'écran de taille minimale de 1024px */
+@media (min-width: 1024px) {
+
 }
