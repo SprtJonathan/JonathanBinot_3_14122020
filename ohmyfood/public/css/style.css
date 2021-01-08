@@ -85,6 +85,19 @@ footer div a:active {
   background-color: transparent;
 }
 
+@media (min-width: 720px) and (max-width: 767px) {
+  footer {
+    padding-bottom: 35px;
+  }
+  footer h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  footer a {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
 a.button {
   display: inline;
   color: white;
@@ -130,6 +143,12 @@ a.order-button:hover {
     padding: 15px 18px;
   }
 }
+@media (min-width: 720px) {
+  a.button {
+    font-size: 23px;
+    padding: 18px 25px;
+  }
+}
 html {
   overflow-x: hidden;
 }
@@ -143,11 +162,20 @@ body {
   overflow-x: hidden;
 }
 
+h2 {
+  font-size: 23px;
+}
+
 a {
   text-decoration: none;
   color: black;
 }
 
+@media (min-width: 720px) and (max-width: 767px) {
+  h2 {
+    font-size: 40px;
+  }
+}
 @media (min-width: 768px) {
   body {
     font-family: "Roboto", sans-serif;
@@ -344,7 +372,6 @@ a {
 }
 #explore-restaurant .purpose {
   padding: 0% 5%;
-  font-size: 23px;
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -368,7 +395,6 @@ a.restaurant-page {
   margin-bottom: 20%;
 }
 #how-to .steps-title {
-  font-size: 23px;
   margin: 15% 5% 2%;
 }
 #how-to .step {
@@ -415,7 +441,6 @@ a.restaurant-page {
   padding-bottom: 15%;
 }
 #restaurants-choice .restaurants-title {
-  font-size: 23px;
   margin: 15% 5% 2%;
   padding: 15% 0% 5%;
 }
@@ -432,10 +457,6 @@ a.restaurant-page {
   border-radius: 15px;
   animation: progressive-spawn 2000ms 5s both;
   /* Positionnement des images des restaurants */
-}
-#restaurants-choice .restaurant-block:hover {
-  box-shadow: 4px 5px 6px 2px #999999;
-  transition: ease 0.3s;
 }
 #restaurants-choice .restaurant-block img {
   object-fit: cover;
@@ -591,7 +612,72 @@ a.restaurant-page {
     height: 200px;
   }
 }
+/* Résolution horizontale de minimum 720px */
+@media (min-width: 720px) and (max-width: 767px) {
+  header h1 {
+    font-size: 43px;
+  }
+
+  #explore-restaurant {
+    padding: 10% 8%;
+  }
+  #explore-restaurant .purpose {
+    padding: 0% 15%;
+  }
+  #explore-restaurant p {
+    font-size: 27px;
+  }
+
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to .step {
+    padding: 2% 2% 2% 0%;
+    margin-bottom: 1%;
+  }
+  #how-to .step .step-number {
+    font-size: 25px;
+    padding: 10px 19px;
+    margin: 5% 0% 5% -5%;
+  }
+  #how-to .step .step-icon {
+    color: #646464;
+    font-size: 30px;
+    margin-left: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  #how-to .step .step-text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  #restaurants-choice .restaurant-block .restaurant-new {
+    font-size: 25px;
+    padding: 8px 10px;
+    top: 20px;
+    right: 20px;
+  }
+  #restaurants-choice .restaurant-block img {
+    height: 325px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details div h3 {
+    font-size: 30px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details div p {
+    font-size: 30px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details i {
+    font-size: 40px;
+  }
+}
 /* Format tablette */
+/* Résolution minimale de 768px */
 @media (min-width: 768px) {
   .spinner {
     border: 15px solid #9356dc;
@@ -616,7 +702,6 @@ a.restaurant-page {
   }
   #how-to .steps-title {
     display: block;
-    font-size: 23px;
     margin: 15% 5% 2%;
     padding-left: 40vw;
     padding-right: 40vw;
@@ -644,7 +729,6 @@ a.restaurant-page {
     padding-top: 0px;
   }
   #restaurants-choice .restaurants-title {
-    font-size: 23px;
     margin: 15% 5% 2%;
     padding: 5% 0% 5%;
     margin-top: 0px;

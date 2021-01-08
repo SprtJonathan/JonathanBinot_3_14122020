@@ -11,9 +11,19 @@ body {
   overflow-x: hidden;
 }
 
+h2 {
+  font-size: 23px;
+}
+
 a {
   text-decoration: none;
   color: black;
+}
+
+@media (min-width: 720px) and (max-width: 767px) {
+  h2 {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 768px) {

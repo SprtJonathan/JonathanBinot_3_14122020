@@ -39,3 +39,10 @@ a.order-button {
     padding: 15px 18px;
   }
 }
+
+@media (min-width: 720px) {
+  a.button {
+    font-size: 23px;
+    padding: 18px 25px;
+  }
+}
