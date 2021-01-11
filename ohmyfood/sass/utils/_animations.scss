@@ -67,8 +67,19 @@
   }
 }
 
+/* Fin du scss principal des pages de menus. Résolution minimale : 360px */
+@media (min-width: 360px) {
+  #menu-categories {
+      .menu-block {
+          &:hover .checkbox {
+              width: $menu-food-size - $menu-food-size / 4;
+              left: 87%;
+          }
+      }
+  }
+}
 
-/* Fin du scss principal des pages de menus. Résolution minimale : 375px */
+/* Résolution minimale : 375px */
 @media (min-width: 375px) {
   #menu-categories {
       .menu-block {
@@ -80,7 +91,7 @@
   }
 }
 
-/* Fin du scss principal des pages de menus. Résolution minimale : 320px */
+/* Résolution minimale : 320px */
 @media (min-width: 425px) {
   #menu-categories {
       .menu-block {
