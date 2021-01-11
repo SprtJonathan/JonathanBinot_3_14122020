@@ -40,9 +40,23 @@ a.order-button {
   }
 }
 
+@media (min-width: 640px) {
+  a.button {
+    font-size: 23px;
+    padding: 19px 27px;
+  }
+}
+
 @media (min-width: 720px) {
   a.button {
     font-size: 23px;
+    padding: 18px 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  a.button {
+    font-size: 18px;
     padding: 18px 25px;
   }
 }

@@ -299,6 +299,83 @@ a.restaurant-page {
   }
 }
 
+/* Résolution horizontale de minimum 640px */
+@media (min-width: 640px) and (max-width: 719px) {
+  header {
+    h1 {
+      font-size: 43px;
+    }
+  }
+
+  #explore-restaurant {
+    padding: 10% 8%;
+    .purpose {
+      padding: 0% 15%;
+      font-size: 35px;
+    }
+    p {
+      font-size: 30px;
+    }
+  }
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    .step {
+      padding: 2% 2% 2% 0%;
+      margin-bottom: 1%;
+
+      .step-number {
+        font-size: 25px;
+        padding: 10px 19px;
+        margin: 5% 0% 5% -5%;
+      }
+
+      .step-icon {
+        color: rgb(100, 100, 100);
+        font-size: 30px;
+        margin-left: 25px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .step-text {
+        font-size: 25px;
+        font-weight: 600;
+        margin-left: 30px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+  }
+  #restaurants-choice {
+    .restaurant-block {
+      .restaurant-new {
+        font-size: 25px;
+        padding: 8px 10px;
+        top: 20px;
+        right: 20px;
+      }
+      img {
+        height: 325px;
+      }
+      .restaurant-details {
+        div {
+          h3 {
+            font-size: 30px;
+          }
+          p {
+            font-size: 30px;
+          }
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        i {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
 /* Résolution horizontale de minimum 720px */
 @media (min-width: 720px) and (max-width: 767px) {
   header {

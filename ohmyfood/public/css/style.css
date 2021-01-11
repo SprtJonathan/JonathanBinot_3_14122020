@@ -143,9 +143,21 @@ a.order-button:hover {
     padding: 15px 18px;
   }
 }
+@media (min-width: 640px) {
+  a.button {
+    font-size: 23px;
+    padding: 19px 27px;
+  }
+}
 @media (min-width: 720px) {
   a.button {
     font-size: 23px;
+    padding: 18px 25px;
+  }
+}
+@media (min-width: 768px) {
+  a.button {
+    font-size: 18px;
     padding: 18px 25px;
   }
 }
@@ -171,6 +183,16 @@ a {
   color: black;
 }
 
+@media (min-width: 360px) {
+  h2 {
+    font-size: 25px;
+  }
+}
+@media (min-width: 640px) and (max-width: 719px) {
+  h2 {
+    font-size: 30px;
+  }
+}
 @media (min-width: 720px) and (max-width: 767px) {
   h2 {
     font-size: 40px;
@@ -612,6 +634,71 @@ a.restaurant-page {
     height: 200px;
   }
 }
+/* Résolution horizontale de minimum 640px */
+@media (min-width: 640px) and (max-width: 719px) {
+  header h1 {
+    font-size: 43px;
+  }
+
+  #explore-restaurant {
+    padding: 10% 8%;
+  }
+  #explore-restaurant .purpose {
+    padding: 0% 15%;
+    font-size: 35px;
+  }
+  #explore-restaurant p {
+    font-size: 30px;
+  }
+
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to .step {
+    padding: 2% 2% 2% 0%;
+    margin-bottom: 1%;
+  }
+  #how-to .step .step-number {
+    font-size: 25px;
+    padding: 10px 19px;
+    margin: 5% 0% 5% -5%;
+  }
+  #how-to .step .step-icon {
+    color: #646464;
+    font-size: 30px;
+    margin-left: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  #how-to .step .step-text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  #restaurants-choice .restaurant-block .restaurant-new {
+    font-size: 25px;
+    padding: 8px 10px;
+    top: 20px;
+    right: 20px;
+  }
+  #restaurants-choice .restaurant-block img {
+    height: 325px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details div h3 {
+    font-size: 30px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details div p {
+    font-size: 30px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details i {
+    font-size: 40px;
+  }
+}
 /* Résolution horizontale de minimum 720px */
 @media (min-width: 720px) and (max-width: 767px) {
   header h1 {
@@ -877,6 +964,10 @@ a.restaurant-page {
 #menu-categories .menu-block h3 {
   margin: 12px 19% 0px 0px;
   margin-right: 19%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
 }
 #menu-categories .menu-block .description-price {
   display: flex;
@@ -888,13 +979,20 @@ a.restaurant-page {
   line-height: 5px;
 }
 #menu-categories .menu-block .description-price :nth-child(1) {
-  white-space: pre;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   z-index: 2;
+  line-height: 15px;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  margin: 0px;
 }
 #menu-categories .menu-block .description-price :nth-child(2) {
   z-index: 3;
   position: relative;
+  line-height: 15px;
+  margin-top: 5px;
 }
 #menu-categories .menu-block .checkbox {
   position: absolute;
@@ -910,6 +1008,7 @@ a.restaurant-page {
   width: 0;
   height: 100%;
   transition: 0.5s ease;
+  font-size: 15px;
   border-radius: 0px 15px 15px 0px;
   z-index: 5;
 }

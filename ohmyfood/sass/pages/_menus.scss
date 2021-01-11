@@ -1,110 +1,120 @@
 .menu {
-    margin: 0%;
-    width: 100vw;
-    background-position: fixed top;
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    background-color: whitesmoke;
-    padding-top: 55%;
-    height: fit-content;
-    margin-bottom: 0%;
+  margin: 0%;
+  width: 100vw;
+  background-position: fixed top;
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-color: whitesmoke;
+  padding-top: 55%;
+  height: fit-content;
+  margin-bottom: 0%;
 }
 
 .restaurant-id {
-    background-color: whitesmoke;
-    border-radius: 30px 30px 0px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    h1 {
-        margin: 5%;
-        margin-right: 0%;
-        padding-top: 10px;
-        font-family: 'Shrikhand';
-        font-size: 25px;
-        font-weight: 200;
-    }
-    i {
-        margin: 5%;
-        padding-top: 15px;
-        margin-left: 15px;
-        font-size: 25px;
-    }
+  background-color: whitesmoke;
+  border-radius: 30px 30px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  h1 {
+    margin: 5%;
+    margin-right: 0%;
+    padding-top: 10px;
+    font-family: "Shrikhand";
+    font-size: 25px;
+    font-weight: 200;
+  }
+  i {
+    margin: 5%;
+    padding-top: 15px;
+    margin-left: 15px;
+    font-size: 25px;
+  }
 }
 
 #menu-categories {
-    background-color: whitesmoke;
-    margin-top: 0%;
-    h2 {
-        font-weight: 100;
-        font-family: "Roboto Light", sans-serif;
-        font-size: 17px;
-        padding-top: 5%;
-        margin: 0% 5% 7% 4%;
+  background-color: whitesmoke;
+  margin-top: 0%;
+  h2 {
+    font-weight: 100;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 17px;
+    padding-top: 5%;
+    margin: 0% 5% 7% 4%;
+  }
+  .menu-block {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    padding: 0% 5%;
+    height: fit-content;
+    width: 85vw;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    animation: slide-up 1s both;
+    @include elements-shadow;
+    h3 {
+      margin: 12px 19% 0px 0px;
+      margin-right: 19%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 14px;
     }
-    .menu-block {
+    .description-price {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      transition: ease 500ms;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+      line-height: 5px;
+      :nth-child(1) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        z-index: 2;
+        line-height: 15px;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        margin: 0px;
+      }
+      :nth-child(2) {
+        z-index: 3;
         position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        background-color: white;
-        border-radius: 15px;
-        padding: 0% 5%;
-        height: fit-content;
-        width: 85vw;
-        margin: auto;
-        margin-top: 5%;
-        margin-bottom: 5%;
-        animation: slide-up 1s both;
-        @include elements-shadow;
-        h3 {
-            margin: 12px 19% 0px 0px;
-            margin-right: 19%;
-        }
-        .description-price {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            transition: ease 500ms;
-            padding-bottom: 0px;
-            margin-bottom: 0px;
-            line-height: 5px;
-            :nth-child(1) {
-                white-space: pre; 
-                text-overflow: ellipsis;
-                z-index: 2;
-            }
-            :nth-child(2) {
-                z-index: 3;
-                position: relative;
-            }
-        }
-        .checkbox {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            bottom: 0;
-            left: 100%;
-            right: 0;
-            background-color: $terciary-color;
-            color: white;
-            overflow: hidden;
-            width: 0;
-            height: 100%;
-            transition: .5s ease;
-            
-            border-radius: 0px 15px 15px 0px;
-            z-index: 5;
-        }
+        line-height: 15px;
+        margin-top: 5px;
+      }
     }
+    .checkbox {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 0;
+      left: 100%;
+      right: 0;
+      background-color: $terciary-color;
+      color: white;
+      overflow: hidden;
+      width: 0;
+      height: 100%;
+      transition: 0.5s ease;
+        font-size: 15px;
+      border-radius: 0px 15px 15px 0px;
+      z-index: 5;
+    }
+  }
 }
 
 .order-button-block {
-    display: flex;
-    justify-self: center;
-    padding-top: 30px;
-    padding-bottom: 60px;
-    background-color: whitesmoke;
+  display: flex;
+  justify-self: center;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  background-color: whitesmoke;
 }
-

@@ -20,6 +20,18 @@ a {
   color: black;
 }
 
+@media (min-width: 360px ) { 
+  h2 {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 719px)  {
+  h2 {
+    font-size: 30px;
+  }
+}
+
 @media (min-width: 720px) and (max-width: 767px) {
   h2 {
     font-size: 40px;
