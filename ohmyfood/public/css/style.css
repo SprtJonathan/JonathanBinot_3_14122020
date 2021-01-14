@@ -25,12 +25,24 @@ header h1 {
 }
 header .return-home {
   position: absolute;
-  top: 3.5%;
-  left: 20px;
+  top: 2.5%;
+  left: 7vw;
   font-size: 18px;
   color: #4b4b4b;
 }
+header .return-home:hover {
+  animation: return-rotation 500ms;
+}
 
+@media (min-width: 425px) {
+  header .return-home {
+    position: absolute;
+    top: 3%;
+    left: 7vw;
+    font-size: 18px;
+    color: black;
+  }
+}
 @media (min-width: 768px) {
   header {
     display: block;
@@ -47,9 +59,9 @@ header .return-home {
   }
   header .return-home {
     position: absolute;
-    top: 2.7%;
-    left: 20px;
-    font-size: 18px;
+    top: 5%;
+    left: 7vw;
+    font-size: 25px;
     color: black;
   }
 }
@@ -116,6 +128,7 @@ a.button {
 a.button:hover {
   box-shadow: 4px 5px 6px 2px #999999;
   transition: ease 0.3s;
+  background-image: linear-gradient(170deg, #fface8, #ae80e5);
 }
 
 a.order-button {
@@ -126,7 +139,7 @@ a.order-button {
   font-weight: 500;
   text-decoration: none;
   background-image: linear-gradient(170deg, #ff79da, #9356dc);
-  padding: 15px 15%;
+  padding: 15px 11%;
   border-radius: 50px;
   margin: auto;
   margin-top: 15px;
@@ -136,6 +149,7 @@ a.order-button {
 a.order-button:hover {
   box-shadow: 4px 5px 6px 2px #999999;
   transition: ease 0.3s;
+  background-image: linear-gradient(170deg, #fface8, #ae80e5);
 }
 
 @media (min-width: 425px) {
@@ -293,11 +307,74 @@ a {
     left: 87%;
   }
 }
-/* Résolution minimale : 320px */
+/* Résolution minimale : 425px */
 @media (min-width: 425px) {
   #menu-categories .menu-block:hover .checkbox {
     width: 48.75px;
     left: 88%;
+  }
+}
+/* Résolution minimale : 720px */
+@media (min-width: 720px) {
+  #menu-categories .menu-block:hover .checkbox {
+    width: 48.75px;
+    left: 88.2vw;
+  }
+}
+/* Résolution minimale : 767px */
+@media (min-width: 767px) {
+  #menu-categories .menu-block:hover .checkbox {
+    width: 48.75px;
+    left: 94%;
+  }
+}
+/* Résolution minimale : 768px - Format tablette*/
+@media (min-width: 768px) {
+  #menu-categories .menu-block:hover .checkbox {
+    width: 48.75px;
+    left: 84%;
+  }
+}
+/* Résolution minimale : 1024px - Format tablette*/
+@media (min-width: 1024px) {
+  #menu-categories .menu-block:hover .checkbox {
+    width: 48.75px;
+    left: 88%;
+  }
+}
+/* Résolution minimale : 1280px - Format tablette*/
+@media (min-width: 1280px) {
+  #menu-categories .menu-block:hover .checkbox {
+    width: 48.75px;
+    left: 90%;
+  }
+}
+/* Résolution minimale : 1440px - Format tablette*/
+@media (min-width: 1440px) {
+  #menu-categories .menu-block:hover .checkbox {
+    width: 48.75px;
+    left: 91.2%;
+  }
+}
+/* Résolution minimale : 1536px - Format Desktop*/
+@media (min-width: 1536px) {
+  #menu-categories .menu-block:hover .checkbox {
+    width: 48.75px;
+    left: 92%;
+  }
+}
+/* Résolution minimale : 1680px - Format Desktop*/
+@media (min-width: 1680px) {
+  #menu-categories .menu-block:hover .checkbox {
+    width: 48.75px;
+    left: 92.5%;
+  }
+}
+/* Résolution minimale : 1920px - Format Desktop*/
+@media (min-width: 1920px) {
+  #menu-categories .menu-block:hover .checkbox {
+    width: 48.75px;
+    left: 93.5%;
   }
 }
 @keyframes loading-screen-anim {
@@ -347,6 +424,14 @@ a {
     transform: rotate(360deg);
   }
 }
+@keyframes return-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*@import "./utils/functions";
 @import "./utils/extensions";
 @import "./base/base";
@@ -385,7 +470,7 @@ a {
   padding-right: 35px;
   background-color: #e6e6e6;
 }
-#user-location p {
+#user-location .location-title {
   font-size: 0.9rem;
   font-weight: 600;
   color: rgba(30, 30, 30, 0.8);
@@ -555,7 +640,7 @@ a.restaurant-page {
   background: linear-gradient(225deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: ease 100ms;
+  transition: all 500ms ease;
   font-weight: 800;
 }
 
@@ -564,7 +649,7 @@ a.restaurant-page {
   #user-location {
     padding-right: 50px;
   }
-  #user-location p {
+  #user-location .location-title {
     font-size: 18px;
   }
 
@@ -608,10 +693,13 @@ a.restaurant-page {
   }
 
   #explore-restaurant {
-    padding: 10% 15%;
+    padding: 10% 12%;
   }
   #explore-restaurant .purpose {
     padding: 0% 10%;
+  }
+  #explore-restaurant p {
+    font-size: 18px;
   }
 
   /* Style des blocs montrant les étapes de sélection */
@@ -905,7 +993,148 @@ a.restaurant-page {
     line-height: 5px;
   }
 }
-/* Format d'écran de taille minimale de 1024px */
+/* Format d'écran de taille minimale de 1025px */
+@media (min-width: 1025px) {
+  #explore-restaurant {
+    padding: 50px;
+  }
+
+  .spinner {
+    border: 25px solid #9356dc;
+    border-top-color: #ff79da;
+  }
+
+  .loading-logo {
+    font-size: 45px;
+  }
+
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 35px;
+    padding-bottom: 0px;
+  }
+  #how-to .steps-title {
+    display: block;
+    margin: 15% 5% 2%;
+    padding-left: 40vw;
+    padding-right: 40vw;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  #how-to .step {
+    position: relative;
+    padding: 1% 2% 1% 0%;
+    margin: auto;
+    width: 20vw;
+    height: 50px;
+    justify-content: center;
+  }
+  #how-to .step .step-number {
+    position: absolute;
+    left: 50%;
+    top: -30px;
+  }
+
+  /* Style de la section comprenant les restaurants disponibles */
+  #restaurants-choice {
+    background-color: whitesmoke;
+    padding: 50px;
+    margin: 0px;
+  }
+  #restaurants-choice .restaurants-title {
+    margin: 15% 5% 2%;
+    padding: 0% 0% 0%;
+    margin-top: 0px;
+  }
+  #restaurants-choice .restaurant-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin: auto;
+    margin-top: 0px;
+  }
+  #restaurants-choice .restaurant-block {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 0vw;
+    margin-right: 2vw;
+    margin-bottom: 0vw;
+    box-shadow: 3px 4px 5px 1px #dfdfdf;
+    transition: ease 0.3s;
+    width: 20vw;
+    background-color: white;
+    border-radius: 15px;
+    /* Positionnement des images des restaurants */
+  }
+  #restaurants-choice .restaurant-block:hover {
+    transform: scale(1.1, 1.1);
+    transition: all 300ms ease;
+  }
+  #restaurants-choice .restaurant-block img {
+    object-fit: cover;
+    width: 20vw;
+    height: 10vw;
+    border-radius: 15px 15px 0px 0px;
+  }
+  #restaurants-choice .restaurant-block .image-lpdg {
+    object-position: 50% bottom;
+  }
+  #restaurants-choice .restaurant-block .image-lne {
+    object-position: 50% 60%;
+  }
+  #restaurants-choice .restaurant-block .image-alf {
+    object-position: 50% bottom;
+  }
+  #restaurants-choice .restaurant-block .image-ldds {
+    object-position: 50% bottom;
+  }
+  #restaurants-choice .restaurant-block .restaurant-new {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #99e2d0;
+    color: green;
+    font-size: 15px;
+    border-radius: 3px;
+    padding: 0px;
+    margin: 0px;
+    width: fit-content;
+  }
+  #restaurants-choice .restaurant-block .restaurant-new p {
+    padding: 0px 10px;
+    margin: 5px;
+    font-weight: 700;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0% 5%;
+    color: black;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details div {
+    position: relative;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details div h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 15px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details div p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 5px;
+  }
+}
 .menu {
   margin: 0%;
   width: 100vw;
@@ -1028,6 +1257,47 @@ a.restaurant-page {
   background-color: whitesmoke;
 }
 
+@media (min-width: 768px) {
+  .menu {
+    padding-top: 45%;
+  }
+
+  .restaurant-id {
+    height: 100px;
+  }
+  .restaurant-id h1 {
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+  .restaurant-id i {
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .menu-food {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    background-color: whitesmoke;
+    margin: auto;
+  }
+
+  #menu-categories {
+    margin: auto;
+  }
+  #menu-categories h2 {
+    margin-top: 0px;
+  }
+  #menu-categories .menu-block {
+    width: 35vw;
+  }
+}
+@media (min-width: 1025px) {
+  #menu-categories .menu-block {
+    width: 25vw;
+  }
+}
 .menu.alf {
   background-image: url("../../public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }

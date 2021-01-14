@@ -27,7 +27,7 @@
   justify-content: center;
   padding-right: 35px;
   background-color: rgb(230, 230, 230);
-  p {
+  .location-title {
     font-size: 0.9rem;
     font-weight: 600;
     color: rgba(30, 30, 30, 0.8);
@@ -198,7 +198,7 @@ a.restaurant-page {
           background: linear-gradient(225deg, $primary-color, $secondary-color);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          transition: ease 100ms;
+          transition: all 500ms ease ;
           font-weight: 800;
         }
       }
@@ -210,7 +210,7 @@ a.restaurant-page {
 @media (min-width: 375px) {
   #user-location {
     padding-right: 50px;
-    p {
+    .location-title {
       font-size: 18px;
     }
   }
@@ -261,9 +261,12 @@ a.restaurant-page {
   }
 
   #explore-restaurant {
-    padding: 10% 15%;
+    padding: 10% 12%;
     .purpose {
       padding: 0% 10%;
+    }
+    p {
+      font-size: 18px;
     }
   }
   /* Style des blocs montrant les étapes de sélection */
@@ -590,6 +593,145 @@ a.restaurant-page {
   }
 }
 
-/* Format d'écran de taille minimale de 1024px */
-@media (min-width: 1024px) {
+/* Format d'écran de taille minimale de 1025px */
+@media (min-width: 1025px) {
+  #explore-restaurant {
+    padding: 50px;
+  }
+
+  .spinner {
+    border: 25px solid $primary-color;
+    border-top-color: $secondary-color;
+  }
+  .loading-logo {
+    font-size: 45px;
+  }
+
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 35px;
+    padding-bottom: 0px;
+    .steps-title {
+      display: block;
+      @include title-style;
+      padding-left: 40vw;
+      padding-right: 40vw;
+      margin: auto;
+      margin-top: 25px;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+    .step {
+      position: relative;
+      padding: 1% 2% 1% 0%;
+      margin: auto;
+      width: 20vw;
+      height: 50px;
+      justify-content: center;
+
+      .step-number {
+        position: absolute;
+        left: 50%;
+        top: -30px;
+      }
+    }
+  }
+  /* Style de la section comprenant les restaurants disponibles */
+  #restaurants-choice {
+    background-color: whitesmoke;
+    padding: 50px;
+    margin: 0px;
+    .restaurants-title {
+      @include title-style;
+      padding: 0% 0% 0%;
+      margin-top: 0px;
+    }
+
+    .restaurant-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 90vw;
+      margin: auto;
+      margin-top: 0px;
+    }
+
+    .restaurant-block {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      margin: auto;
+      margin-left: 0vw;
+      margin-right: 2vw;
+      margin-bottom: 0vw;
+      @include elements-shadow;
+      width: $restaurant-image-size-desktop;
+      background-color: white;
+      border-radius: 15px;
+      &:hover {
+        transform: scale(1.1, 1.1);
+        transition: all 300ms ease;
+      }
+      img {
+        object-fit: cover;
+        width: $restaurant-image-size-desktop;
+        height: $restaurant-image-size-desktop * 1.5/3;
+        border-radius: 15px 15px 0px 0px;
+      }
+      /* Positionnement des images des restaurants */
+      .image-lpdg {
+        object-position: 50% bottom;
+      }
+      .image-lne {
+        object-position: 50% 60%;
+      }
+      .image-alf {
+        object-position: 50% bottom;
+      }
+      .image-ldds {
+        object-position: 50% bottom;
+      }
+      .restaurant-new {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $terciary-color;
+        color: green;
+        font-size: 15px;
+        border-radius: 3px;
+        padding: 0px;
+        margin: 0px;
+        width: fit-content;
+        p {
+          padding: 0px 10px;
+          margin: 5px;
+          font-weight: 700;
+        }
+      }
+      .restaurant-details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0% 5%;
+        color: black;
+        div {
+          position: relative;
+          h3 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 15px;
+          }
+          p {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 5px;
+          }
+        }
+      }
+    }
+  }
 }

@@ -121,3 +121,48 @@
 
 @media (min-width: 360px) {
 }
+
+@media (min-width: 360px) {
+}
+
+@media (min-width: 768px) {
+  .menu {
+    padding-top: 45%;
+  }
+  .restaurant-id {
+    height: 100px;
+    h1 {
+      margin-top: 20px;
+      padding-top: 20px;
+    }
+    i {
+      margin-top: 20px;
+      padding-top: 20px;
+    }
+  }
+  .menu-food {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    background-color: whitesmoke;
+    margin: auto;
+  }
+  #menu-categories {
+    margin: auto;
+    h2 {
+      margin-top: 0px;
+    }
+    .menu-block {
+      width: 35vw;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  #menu-categories {
+    .menu-block {
+      width: 25vw;
+    }
+  }
+}
