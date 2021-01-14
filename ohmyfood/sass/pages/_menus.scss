@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  h1 {
+  .restaurant-name {
     margin: 5%;
     margin-right: 0%;
     padding-top: 10px;
@@ -32,9 +32,10 @@
   }
 }
 
-#menu-categories {
+.menu-categories {
   background-color: whitesmoke;
   margin-top: 0%;
+  z-index: 200;
   h2 {
     font-weight: 100;
     font-family: "Roboto Light", sans-serif;
@@ -131,7 +132,7 @@
   }
   .restaurant-id {
     height: 100px;
-    h1 {
+    .restaurant-name {
       margin-top: 20px;
       padding-top: 20px;
     }
@@ -147,8 +148,9 @@
     width: 100vw;
     background-color: whitesmoke;
     margin: auto;
+    z-index: -1;
   }
-  #menu-categories {
+  .menu-categories {
     margin: auto;
     h2 {
       margin-top: 0px;
@@ -160,7 +162,7 @@
 }
 
 @media (min-width: 1025px) {
-  #menu-categories {
+  .menu-categories {
     .menu-block {
       width: 25vw;
     }

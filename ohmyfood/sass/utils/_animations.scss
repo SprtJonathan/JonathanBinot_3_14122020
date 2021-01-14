@@ -50,7 +50,7 @@
 
 /* Animation de la sélection d'un plat sur la page des menus */
 
-#menu-categories {
+.menu-categories {
   .menu-block {
     &:hover .checkbox {
       width: $menu-food-size - $menu-food-size / 4;
@@ -69,7 +69,7 @@
 
 /* Fin du scss principal des pages de menus. Résolution minimale : 360px */
 @media (min-width: 360px) {
-  #menu-categories {
+  .menu-categories {
       .menu-block {
           &:hover .checkbox {
               width: $menu-food-size - $menu-food-size / 4;
@@ -81,7 +81,7 @@
 
 /* Résolution minimale : 375px */
 @media (min-width: 375px) {
-  #menu-categories {
+  .menu-categories {
       .menu-block {
           &:hover .checkbox {
               width: $menu-food-size - $menu-food-size / 4;
@@ -93,7 +93,7 @@
 
 /* Résolution minimale : 425px */
 @media (min-width: 425px) {
-  #menu-categories {
+  .menu-categories {
       .menu-block {
           &:hover .checkbox {
               width: $menu-food-size - $menu-food-size / 4;
@@ -105,7 +105,7 @@
 
 /* Résolution minimale : 720px */
 @media (min-width: 720px) {
-  #menu-categories {
+  .menu-categories {
       .menu-block {
           &:hover .checkbox {
               width: $menu-food-size - $menu-food-size / 4;
@@ -117,7 +117,7 @@
 
 /* Résolution minimale : 767px */
 @media (min-width: 767px) {
-  #menu-categories {
+  .menu-categories {
       .menu-block {
           &:hover .checkbox {
               width: $menu-food-size - $menu-food-size / 4;
@@ -129,7 +129,7 @@
 
 /* Résolution minimale : 768px - Format tablette*/
 @media (min-width: 768px) {
-  #menu-categories {
+  .menu-categories {
       .menu-block {
           &:hover .checkbox {
               width: $menu-food-size - $menu-food-size / 4;
@@ -141,7 +141,7 @@
 
 /* Résolution minimale : 1024px - Format tablette*/
 @media (min-width: 1024px) {
-  #menu-categories {
+  .menu-categories {
       .menu-block {
           &:hover .checkbox {
               width: $menu-food-size - $menu-food-size / 4;
@@ -153,7 +153,7 @@
 
 /* Résolution minimale : 1280px - Format tablette*/
 @media (min-width: 1280px) {
-  #menu-categories {
+  .menu-categories {
       .menu-block {
           &:hover .checkbox {
               width: $menu-food-size - $menu-food-size / 4;
@@ -165,7 +165,7 @@
 
 /* Résolution minimale : 1440px - Format tablette*/
 @media (min-width: 1440px) {
-  #menu-categories {
+  .menu-categories {
       .menu-block {
           &:hover .checkbox {
               width: $menu-food-size - $menu-food-size / 4;
@@ -177,7 +177,7 @@
 
 /* Résolution minimale : 1536px - Format Desktop*/
 @media (min-width: 1536px) {
-  #menu-categories {
+  .menu-categories {
       .menu-block {
           &:hover .checkbox {
               width: $menu-food-size - $menu-food-size / 4;
@@ -189,7 +189,7 @@
 
 /* Résolution minimale : 1680px - Format Desktop*/
 @media (min-width: 1680px) {
-  #menu-categories {
+  .menu-categories {
       .menu-block {
           &:hover .checkbox {
               width: $menu-food-size - $menu-food-size / 4;
@@ -201,7 +201,7 @@
 
 /* Résolution minimale : 1920px - Format Desktop*/
 @media (min-width: 1920px) {
-  #menu-categories {
+  .menu-categories {
       .menu-block {
           &:hover .checkbox {
               width: $menu-food-size - $menu-food-size / 4;
