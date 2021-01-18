@@ -83,7 +83,6 @@ footer div {
   flex-direction: column;
   width: 90vw;
   font-size: 15px;
-  font-weight: 0;
   margin: auto;
 }
 footer div a {
@@ -374,7 +373,7 @@ a {
 @media (min-width: 1920px) {
   .menu-categories .menu-block:hover .checkbox {
     width: 48.75px;
-    left: 93.5%;
+    left: 91%;
   }
 }
 @keyframes loading-screen-anim {
@@ -628,20 +627,38 @@ a.restaurant-page {
   font-weight: 300;
   line-height: 5px;
 }
-#restaurants-choice .restaurant-block .restaurant-details i {
+#restaurants-choice .restaurant-block .restaurant-details .heart {
+  position: absolute;
+}
+#restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(1) {
   position: absolute;
   font-size: 25px;
   font-weight: 100;
-  left: 85%;
+  left: 220px;
+  top: -10px;
+  opacity: 1;
   transition: ease 100ms;
 }
-#restaurants-choice .restaurant-block .restaurant-details i:hover {
+#restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(1):hover {
+  opacity: 0;
+  transition: ease 500ms;
+}
+#restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(2) {
+  position: absolute;
+  font-size: 25px;
+  font-weight: 800;
+  left: 220px;
+  top: -10px;
   color: #9356dc;
   background: linear-gradient(225deg, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
   transition: all 500ms ease;
-  font-weight: 800;
+}
+#restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(2):hover {
+  opacity: 1;
+  transition: ease 500ms;
 }
 
 /* Résolution minimale : 375px */
@@ -685,6 +702,14 @@ a.restaurant-page {
 
   #restaurants-choice .restaurant-block img {
     height: 175px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(1) {
+    left: 270px;
+    top: -10px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(2) {
+    left: 270px;
+    top: -10px;
   }
 }
 @media (min-width: 425px) {
@@ -790,8 +815,15 @@ a.restaurant-page {
   #restaurants-choice .restaurant-block .restaurant-details div p {
     font-size: 30px;
   }
-  #restaurants-choice .restaurant-block .restaurant-details i {
-    font-size: 40px;
+  #restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(1) {
+    left: 480px;
+    top: -10px;
+    font-size: 45px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(2) {
+    left: 480px;
+    top: -10px;
+    font-size: 45px;
   }
 }
 /* Résolution horizontale de minimum 720px */
@@ -854,8 +886,15 @@ a.restaurant-page {
   #restaurants-choice .restaurant-block .restaurant-details div p {
     font-size: 30px;
   }
-  #restaurants-choice .restaurant-block .restaurant-details i {
-    font-size: 40px;
+  #restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(1) {
+    left: 480px;
+    top: -10px;
+    font-size: 45px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(2) {
+    left: 480px;
+    top: -10px;
+    font-size: 45px;
   }
 }
 /* Format tablette */
@@ -991,6 +1030,14 @@ a.restaurant-page {
     font-size: 18px;
     font-weight: 300;
     line-height: 5px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(1) {
+    left: 31.5vw;
+    top: -10px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(2) {
+    left: 31.5vw;
+    top: -10px;
   }
 }
 /* Format d'écran de taille minimale de 1025px */
@@ -1134,11 +1181,19 @@ a.restaurant-page {
     font-weight: 300;
     line-height: 5px;
   }
+  #restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(1) {
+    left: 15vw;
+    top: -10px;
+  }
+  #restaurants-choice .restaurant-block .restaurant-details .heart :nth-child(2) {
+    left: 15vw;
+    top: -10px;
+  }
 }
 .menu {
   margin: 0%;
   width: 100vw;
-  background-position: fixed top;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: 100vw;
   background-color: whitesmoke;
