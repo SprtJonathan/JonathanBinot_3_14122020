@@ -1097,6 +1097,9 @@ a.restaurant-page {
     margin: 15% 5% 2%;
     padding: 0% 0% 0%;
     margin-top: 0px;
+    margin: auto;
+    margin-bottom: 25px;
+    text-align: center;
   }
   #restaurants-choice .restaurant-list {
     display: flex;
@@ -1105,14 +1108,15 @@ a.restaurant-page {
     width: 90vw;
     margin: auto;
     margin-top: 0px;
+    justify-content: center;
   }
   #restaurants-choice .restaurant-block {
     display: flex;
     position: relative;
     flex-direction: column;
     margin: auto;
-    margin-left: 0vw;
-    margin-right: 2vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
     margin-bottom: 0vw;
     box-shadow: 3px 4px 5px 1px #dfdfdf;
     transition: ease 0.3s;
