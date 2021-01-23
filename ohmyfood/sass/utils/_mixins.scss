@@ -1,0 +1,14 @@
+/* Mixins du site */
+@mixin elements-shadow {
+  box-shadow: 3px 4px 5px 1px rgb(223, 223, 223);
+  transition: ease 0.3s;
+}
+
+@mixin elements-shadow-hover {
+  box-shadow: 4px 5px 6px 2px rgb(153, 153, 153);
+  transition: ease 0.3s;
+}
+
+@mixin title-style {
+  margin: 15% 5% 2%;
+}

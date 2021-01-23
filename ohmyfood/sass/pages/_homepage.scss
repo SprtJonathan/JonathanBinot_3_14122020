@@ -1,0 +1,809 @@
+/* Code spécifique à la page d'accueil */
+
+.loading-spinner {
+  display: flex;
+  height: 10vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  height: 10vw;
+  width: 10vw;
+  border: 5px solid $primary-color;
+  border-top-color: $secondary-color;
+  border-radius: 100%;
+  animation: spinner-rotation 0.6s infinite ease 0.25s;
+}
+
+.loading-logo {
+  font-family: "Shrikhand";
+}
+
+#user-location {
+  display: flex;
+  z-index: 10;
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 35px;
+  background-color: rgb(230, 230, 230);
+  .location-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(30, 30, 30, 0.8);
+    padding: 0.2rem;
+    margin-left: 5px;
+  }
+}
+
+#explore-restaurant {
+  display: flex;
+  flex-direction: column;
+  padding: 15% 5%;
+  background-color: whitesmoke;
+  .purpose {
+    padding: 0% 5%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    padding: 0%;
+  }
+}
+
+a.restaurant-page {
+  text-decoration: none;
+}
+
+/* Style des blocs montrant les étapes de sélection */
+#how-to {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20%;
+  .steps-title {
+    @include title-style;
+  }
+  .step {
+    display: flex;
+    flex-direction: row;
+    padding: 5% 5% 2% 0%;
+    border-radius: 20px;
+    @include elements-shadow;
+    margin: 8%;
+    margin-bottom: 2%;
+    background-color: whitesmoke;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 300ms;
+
+    &:hover {
+      background-color: lighten($color: $primary-color, $amount: 35);
+      transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 300ms;
+    }
+
+    &:hover > .step-icon {
+      color: $primary-color;
+      transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 300ms;
+    }
+    .step-number {
+      color: white;
+      background-color: $primary-color;
+      padding: 5px 9px;
+      margin: 5% 0% 5% -5%;
+      border-radius: 50%;
+    }
+
+    .step-icon {
+      color: rgb(100, 100, 100);
+      font-size: 15px;
+      margin-left: 15px;
+    }
+
+    .step-text {
+      font-size: 15px;
+      font-weight: 600;
+      margin-left: 20px;
+    }
+  }
+}
+
+/* Style de la section comprenant les restaurants disponibles */
+#restaurants-choice {
+  background-color: whitesmoke;
+  padding-bottom: 15%;
+  .restaurants-title {
+    @include title-style;
+    padding: 15% 0% 5%;
+  }
+
+  .restaurant-block {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 5%;
+    @include elements-shadow;
+    width: 90vw;
+    background-color: white;
+    border-radius: 15px;
+    animation: progressive-spawn $prog-bar-dur 5s both;
+    img {
+      object-fit: cover;
+      width: 90vw;
+      height: 150px;
+      border-radius: 15px 15px 0px 0px;
+    }
+    /* Positionnement des images des restaurants */
+    .image-lpdg {
+      object-position: 50% bottom;
+    }
+    .image-lne {
+      object-position: 50% 60%;
+    }
+    .image-alf {
+      object-position: 50% bottom;
+    }
+    .image-ldds {
+      object-position: 50% bottom;
+    }
+    .restaurant-new {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: $terciary-color;
+      color: green;
+      font-size: 15px;
+      border-radius: 3px;
+      padding: 0px;
+      margin: 0px;
+      width: fit-content;
+      p {
+        padding: 0px 10px;
+        margin: 5px;
+        font-weight: 700;
+      }
+    }
+    .restaurant-details {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0% 5%;
+      color: black;
+      div {
+        position: relative;
+        h3 {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 15px;
+        }
+        p {
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 5px;
+        }
+      }
+      .heart {
+        position: absolute;
+        :nth-child(1) {
+          position: absolute;
+          font-size: 25px;
+          font-weight: 100;
+          left: 220px;
+          top: -10px;
+          opacity: 1;
+          transition: ease 100ms;
+          &:hover {
+            opacity: 0;
+            transition: ease 500ms;
+          }
+        }
+        :nth-child(2) {
+          position: absolute;
+          font-size: 25px;
+          font-weight: 800;
+          left: 220px;
+          top: -10px;
+          color: $primary-color;
+          background: linear-gradient(225deg, $primary-color, $secondary-color);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          opacity: 0;
+          transition: all 500ms ease;
+          &:hover {
+            opacity: 1;
+            transition: ease 500ms;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Résolution minimale : 375px */
+@media (min-width: 375px) {
+  #user-location {
+    padding-right: 50px;
+    .location-title {
+      font-size: 18px;
+    }
+  }
+
+  #explore-restaurant {
+    padding: 10% 5%;
+    .purpose {
+      padding: 0% 10%;
+    }
+  }
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    margin-bottom: 15%;
+    .step {
+      padding: 2% 2% 2% 0%;
+      margin-bottom: 1%;
+
+      .step-icon {
+        color: rgb(100, 100, 100);
+        font-size: 16px;
+        margin-left: 15px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .step-text {
+        font-size: 15px;
+        font-weight: 600;
+        margin-left: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+  }
+
+  #restaurants-choice {
+    .restaurant-block {
+      img {
+        height: 175px;
+      }
+      .restaurant-details {
+        .heart {
+          :nth-child(1) {
+            left: 270px;
+            top: -10px;
+          }
+          :nth-child(2) {
+            left: 270px;
+            top: -10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  #user-location {
+    padding-right: 65px;
+  }
+
+  #explore-restaurant {
+    padding: 10% 12%;
+    .purpose {
+      padding: 0% 10%;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    margin-bottom: 15%;
+    .step {
+      padding: 2% 2% 2% 0%;
+      margin-bottom: 1%;
+
+      .step-icon {
+        color: rgb(100, 100, 100);
+        font-size: 16px;
+        margin-left: 15px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .step-text {
+        font-size: 15px;
+        font-weight: 600;
+        margin-left: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+  }
+  #restaurants-choice {
+    .restaurant-block {
+      img {
+        height: 200px;
+      }
+    }
+  }
+}
+
+/* Résolution horizontale de minimum 640px */
+@media (min-width: 640px) and (max-width: 719px) {
+  header {
+    h1 {
+      font-size: 43px;
+    }
+  }
+
+  #explore-restaurant {
+    padding: 10% 8%;
+    .purpose {
+      padding: 0% 15%;
+      font-size: 35px;
+    }
+    p {
+      font-size: 30px;
+    }
+  }
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    .step {
+      padding: 2% 2% 2% 0%;
+      margin-bottom: 1%;
+
+      .step-number {
+        font-size: 25px;
+        padding: 10px 19px;
+        margin: 5% 0% 5% -5%;
+      }
+
+      .step-icon {
+        color: rgb(100, 100, 100);
+        font-size: 30px;
+        margin-left: 25px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .step-text {
+        font-size: 25px;
+        font-weight: 600;
+        margin-left: 30px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+  }
+  #restaurants-choice {
+    .restaurant-block {
+      .restaurant-new {
+        font-size: 25px;
+        padding: 8px 10px;
+        top: 20px;
+        right: 20px;
+      }
+      img {
+        height: 325px;
+      }
+      .restaurant-details {
+        div {
+          h3 {
+            font-size: 30px;
+          }
+          p {
+            font-size: 30px;
+          }
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        .heart {
+          :nth-child(1) {
+            left: 480px;
+            top: -10px;
+            font-size: 45px;
+          }
+          :nth-child(2) {
+            left: 480px;
+            top: -10px;
+            font-size: 45px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Résolution horizontale de minimum 720px */
+@media (min-width: 720px) and (max-width: 767px) {
+  header {
+    h1 {
+      font-size: 43px;
+    }
+  }
+
+  #explore-restaurant {
+    padding: 10% 8%;
+    .purpose {
+      padding: 0% 15%;
+    }
+    p {
+      font-size: 27px;
+    }
+  }
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    .step {
+      padding: 2% 2% 2% 0%;
+      margin-bottom: 1%;
+
+      .step-number {
+        font-size: 25px;
+        padding: 10px 19px;
+        margin: 5% 0% 5% -5%;
+      }
+
+      .step-icon {
+        color: rgb(100, 100, 100);
+        font-size: 30px;
+        margin-left: 25px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .step-text {
+        font-size: 25px;
+        font-weight: 600;
+        margin-left: 30px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+  }
+  #restaurants-choice {
+    .restaurant-block {
+      .restaurant-new {
+        font-size: 25px;
+        padding: 8px 10px;
+        top: 20px;
+        right: 20px;
+      }
+      img {
+        height: 325px;
+      }
+      .restaurant-details {
+        div {
+          h3 {
+            font-size: 30px;
+          }
+          p {
+            font-size: 30px;
+          }
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        .heart {
+          :nth-child(1) {
+            left: 480px;
+            top: -10px;
+            font-size: 45px;
+          }
+          :nth-child(2) {
+            left: 480px;
+            top: -10px;
+            font-size: 45px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Format tablette */
+/* Résolution minimale de 768px */
+@media (min-width: 768px) {
+  .spinner {
+    border: 15px solid $primary-color;
+    border-top-color: $secondary-color;
+  }
+  .loading-logo {
+    font-size: 35px;
+  }
+
+  #user-location {
+    p {
+      font-size: 1.4rem;
+    }
+  }
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 35px;
+    padding-bottom: 0px;
+    .steps-title {
+      display: block;
+      @include title-style;
+      padding-left: 40vw;
+      padding-right: 40vw;
+      margin: auto;
+      margin-top: 25px;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+    .step {
+      position: relative;
+      padding: 3% 2% 3% 0%;
+      margin: auto;
+
+      .step-number {
+        position: absolute;
+        left: 50%;
+        top: -25px;
+      }
+    }
+  }
+
+  /* Style de la section comprenant les restaurants disponibles */
+  #restaurants-choice {
+    background-color: whitesmoke;
+    padding-bottom: 15%;
+    margin-top: 0px;
+    padding-top: 0px;
+    .restaurants-title {
+      @include title-style;
+      padding: 5% 0% 5%;
+      margin-top: 0px;
+    }
+
+    .restaurant-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .restaurant-block {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      margin: auto;
+      margin-left: 6vw;
+      margin-right: 2vw;
+      margin-bottom: 5vw;
+      @include elements-shadow;
+      width: $restaurant-image-size-tab;
+      background-color: white;
+      border-radius: 15px;
+      animation: progressive-spawn $prog-bar-dur 5s both;
+      img {
+        object-fit: cover;
+        width: $restaurant-image-size-tab;
+        height: 150px;
+        border-radius: 15px 15px 0px 0px;
+      }
+      /* Positionnement des images des restaurants */
+      .image-lpdg {
+        object-position: 50% bottom;
+      }
+      .image-lne {
+        object-position: 50% 60%;
+      }
+      .image-alf {
+        object-position: 50% bottom;
+      }
+      .image-ldds {
+        object-position: 50% bottom;
+      }
+      .restaurant-new {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $terciary-color;
+        color: green;
+        font-size: 15px;
+        border-radius: 3px;
+        padding: 0px;
+        margin: 0px;
+        width: fit-content;
+        p {
+          padding: 0px 10px;
+          margin: 5px;
+          font-weight: 700;
+        }
+      }
+      .restaurant-details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0% 5%;
+        color: black;
+        div {
+          position: relative;
+          h3 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 15px;
+          }
+          p {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 5px;
+          }
+        }
+        .heart {
+          :nth-child(1) {
+            left: 31.5vw;
+            top: -10px;
+          }
+          :nth-child(2) {
+            left: 31.5vw;
+            top: -10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Format d'écran de taille minimale de 1025px */
+@media (min-width: 1025px) {
+  #explore-restaurant {
+    padding: 50px;
+  }
+
+  .spinner {
+    border: 25px solid $primary-color;
+    border-top-color: $secondary-color;
+  }
+  .loading-logo {
+    font-size: 45px;
+  }
+
+  /* Style des blocs montrant les étapes de sélection */
+  #how-to {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 35px;
+    padding-bottom: 0px;
+    .steps-title {
+      display: block;
+      @include title-style;
+      padding-left: 40vw;
+      padding-right: 40vw;
+      margin: auto;
+      margin-top: 25px;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+    .step {
+      position: relative;
+      padding: 1% 2% 1% 0%;
+      margin: auto;
+      width: 20vw;
+      height: 50px;
+      justify-content: center;
+
+      .step-number {
+        position: absolute;
+        left: 50%;
+        top: -30px;
+      }
+    }
+  }
+  /* Style de la section comprenant les restaurants disponibles */
+  #restaurants-choice {
+    background-color: whitesmoke;
+    padding: 50px;
+    margin: 0px;
+    .restaurants-title {
+      @include title-style;
+      padding: 0% 0% 0%;
+      margin-top: 0px;
+      margin: auto;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .restaurant-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 90vw;
+      margin: auto;
+      margin-top: 0px;
+      justify-content: center;
+    }
+
+    .restaurant-block {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      margin: auto;
+      margin-left: 1vw;
+      margin-right: 1vw;
+      margin-bottom: 0vw;
+      @include elements-shadow;
+      width: $restaurant-image-size-desktop;
+      background-color: white;
+      border-radius: 15px;
+      &:hover {
+        transform: scale(1.1, 1.1);
+        transition: all 300ms ease;
+      }
+      img {
+        object-fit: cover;
+        width: $restaurant-image-size-desktop;
+        height: $restaurant-image-size-desktop * 1.5/3;
+        border-radius: 15px 15px 0px 0px;
+      }
+      /* Positionnement des images des restaurants */
+      .image-lpdg {
+        object-position: 50% bottom;
+      }
+      .image-lne {
+        object-position: 50% 60%;
+      }
+      .image-alf {
+        object-position: 50% bottom;
+      }
+      .image-ldds {
+        object-position: 50% bottom;
+      }
+      .restaurant-new {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $terciary-color;
+        color: green;
+        font-size: 15px;
+        border-radius: 3px;
+        padding: 0px;
+        margin: 0px;
+        width: fit-content;
+        p {
+          padding: 0px 10px;
+          margin: 5px;
+          font-weight: 700;
+        }
+      }
+      .restaurant-details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0% 5%;
+        color: black;
+        div {
+          position: relative;
+          h3 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 15px;
+          }
+          p {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 5px;
+          }
+        }
+        .heart {
+          :nth-child(1) {
+            left: 15vw;
+            top: -10px;
+          }
+          :nth-child(2) {
+            left: 15vw;
+            top: -10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+header {
+  display: block;
+  z-index: 0;
+  height: 5%;
+  @include elements-shadow;
+  background-color: white;
+  h1 {
+    font-family: "Shrikhand";
+    font-size: 35px;
+    text-align: center;
+    padding: 4% 2% 2% 2%;
+    margin: auto;
+  }
+  .return-home {
+    position: absolute;
+    top: 2.5%;
+    left: 7vw;
+    font-size: 18px;
+    color: rgb(75, 75, 75);
+    &:hover {
+      animation: return-rotation 500ms;
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  header {
+    .return-home {
+      position: absolute;
+      top: 3%;
+      left: 7vw;
+      font-size: 18px;
+      color: black;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    display: block;
+    z-index: 0;
+    height: 5%;
+    @include elements-shadow;
+    background-color: white;
+    h1 {
+      font-family: "Shrikhand";
+      font-size: 55px;
+      margin: auto;
+    }
+    .return-home {
+      position: absolute;
+      top: 5%;
+      left: 7vw;
+      font-size: 25px;
+      color: black;
+    }
+  }
+}
