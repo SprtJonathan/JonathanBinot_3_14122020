@@ -1,7 +1,6 @@
 {
   "name": "ohmyfood",
   "version": "0.0.1",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./Sass/main.scss:./public/css/style.css"
@@ -15,5 +14,6 @@
   "bugs": {
     "url": "https://github.com/SprtJonathan/JonathanBinot_3_14122020/issues"
   },
-  "homepage": "https://github.com/SprtJonathan/JonathanBinot_3_14122020#readme"
+  "homepage": "https://github.com/SprtJonathan/JonathanBinot_3_14122020#readme",
+  "description": ""
 }

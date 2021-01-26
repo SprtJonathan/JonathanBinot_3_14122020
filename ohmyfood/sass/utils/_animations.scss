@@ -19,6 +19,8 @@
   animation: loading-screen-anim 500ms $loading-screen-delay both;
 }
 
+/* Cette portion de code est ma première approche de l'écran de chargement : Une barre de progression.
+
 .progress {
   display: flex;
   justify-content: center;
@@ -47,13 +49,14 @@
     border-radius: 25px;
   }
 }
+*/
 
 /* Animation de la sélection d'un plat sur la page des menus */
 
 .menu-categories {
   .menu-block {
     &:hover .checkbox {
-      width: $menu-food-size - $menu-food-size / 4;
+      width: $menu-food-size;
       left: 83.9%;
     }
     &:hover .description-price {
@@ -72,7 +75,6 @@
   .menu-categories {
       .menu-block {
           &:hover .checkbox {
-              width: $menu-food-size - $menu-food-size / 4;
               left: 87%;
           }
       }
@@ -84,7 +86,6 @@
   .menu-categories {
       .menu-block {
           &:hover .checkbox {
-              width: $menu-food-size - $menu-food-size / 4;
               left: 87%;
           }
       }
@@ -96,7 +97,6 @@
   .menu-categories {
       .menu-block {
           &:hover .checkbox {
-              width: $menu-food-size - $menu-food-size / 4;
               left: 88%;
           }
       }
@@ -108,7 +108,6 @@
   .menu-categories {
       .menu-block {
           &:hover .checkbox {
-              width: $menu-food-size - $menu-food-size / 4;
               left: 88.2vw;
           }
       }
@@ -120,7 +119,6 @@
   .menu-categories {
       .menu-block {
           &:hover .checkbox {
-              width: $menu-food-size - $menu-food-size / 4;
               left: 94%;
           }
       }
@@ -132,7 +130,6 @@
   .menu-categories {
       .menu-block {
           &:hover .checkbox {
-              width: $menu-food-size - $menu-food-size / 4;
               left: 84%;
           }
       }
@@ -144,7 +141,6 @@
   .menu-categories {
       .menu-block {
           &:hover .checkbox {
-              width: $menu-food-size - $menu-food-size / 4;
               left: 88%;
           }
       }
@@ -156,8 +152,7 @@
   .menu-categories {
       .menu-block {
           &:hover .checkbox {
-              width: $menu-food-size - $menu-food-size / 4;
-              left: 90%;
+              left: 87%;
           }
       }
   }
@@ -168,8 +163,7 @@
   .menu-categories {
       .menu-block {
           &:hover .checkbox {
-              width: $menu-food-size - $menu-food-size / 4;
-              left: 91.2%;
+              left: 88%;
           }
       }
   }
@@ -180,8 +174,7 @@
   .menu-categories {
       .menu-block {
           &:hover .checkbox {
-              width: $menu-food-size - $menu-food-size / 4;
-              left: 92%;
+              left: 89%;
           }
       }
   }
@@ -192,8 +185,7 @@
   .menu-categories {
       .menu-block {
           &:hover .checkbox {
-              width: $menu-food-size - $menu-food-size / 4;
-              left: 92.5%;
+              left: 90.5%;
           }
       }
   }
@@ -204,8 +196,18 @@
   .menu-categories {
       .menu-block {
           &:hover .checkbox {
-              width: $menu-food-size - $menu-food-size / 4;
               left: 91%;
+          }
+      }
+  }
+}
+
+/* Résolution minimale : 2560px - Format Desktop*/
+@media (min-width: 2560px) {
+  .menu-categories {
+      .menu-block {
+          &:hover .checkbox {
+              left: 93.5%;
           }
       }
   }
