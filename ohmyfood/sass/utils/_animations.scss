@@ -19,38 +19,6 @@
   animation: loading-screen-anim 500ms $loading-screen-delay both;
 }
 
-/* Cette portion de code est ma première approche de l'écran de chargement : Une barre de progression.
-
-.progress {
-  display: flex;
-  justify-content: center;
-  border-radius: 255px;
-  width: 90%;
-  height: 5%;
-  h2 {
-    width: fit-content;
-    text-align: center;
-    color: white;
-    font-family: "Shrikhand";
-    font-size: 25px;
-    font-weight: 200;
-    margin: auto;
-    position: fixed;
-    z-index: 20;
-  }
-  &__bar {
-    transform-origin: left;
-    transform: scaleX(0.5);
-    animation: progress-bar $prog-bar-dur $prog-bar-delay both;
-    z-index: 10;
-    background: linear-gradient(170deg, #ff79da, #9356dc);
-    width: 100%;
-    height: 100%;
-    border-radius: 25px;
-  }
-}
-*/
-
 /* Animation de la sélection d'un plat sur la page des menus */
 
 .menu-categories {
