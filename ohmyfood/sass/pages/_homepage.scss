@@ -1,25 +1,4 @@
 /* Code spécifique à la page d'accueil */
-
-.loading-spinner {
-  display: flex;
-  height: 10vw;
-  justify-content: center;
-  align-items: center;
-}
-
-.spinner {
-  height: 10vw;
-  width: 10vw;
-  border: 5px solid $primary-color;
-  border-top-color: $secondary-color;
-  border-radius: 100%;
-  animation: spinner-rotation 0.6s infinite ease 0.25s;
-}
-
-.loading-logo {
-  font-family: "Shrikhand";
-}
-
 #user-location {
   display: flex;
   z-index: 10;
@@ -130,7 +109,7 @@ a.restaurant-page {
     width: 90vw;
     background-color: white;
     border-radius: 15px;
-    animation: progressive-spawn $prog-bar-dur 5s both;
+    animation: progressive-spawn $anim-duration-standard 5s both;
     img {
       object-fit: cover;
       width: 90vw;
@@ -579,7 +558,7 @@ a.restaurant-page {
       width: $restaurant-image-size-tab;
       background-color: white;
       border-radius: 15px;
-      animation: progressive-spawn $prog-bar-dur 5s both;
+      animation: progressive-spawn $anim-duration-standard 5s both;
       img {
         object-fit: cover;
         width: $restaurant-image-size-tab;

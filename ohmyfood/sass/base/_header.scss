@@ -25,6 +25,7 @@ header {
   }
 }
 
+/* Résolution minimale : 425px */
 @media (min-width: 425px) {
   header {
     .return-home {
@@ -33,6 +34,7 @@ header {
   }
 }
 
+/* Résolution minimale : 720px */
 @media (min-width: 720px) {
   header {
     .return-home {
@@ -42,6 +44,7 @@ header {
   }
 }
 
+/* Résolution minimale : 768px */
 @media (min-width: 768px) {
   header {
     display: block;
@@ -61,6 +64,7 @@ header {
   }
 }
 
+/* Résolution minimale : 1024px */
 @media (min-width: 1024px) {
   header {
     .return-home {
@@ -69,6 +73,7 @@ header {
   }
 }
 
+/* Résolution minimale : 1280px */
 @media (min-width: 1280px) {
   header {
     .return-home {
@@ -76,6 +81,8 @@ header {
     }
   }
 }
+
+/* Résolution minimale : 1440px */
 
 @media (min-width: 1440px) {
   header {
@@ -85,6 +92,7 @@ header {
   }
 }
 
+/* Résolution minimale : 1920px */
 @media (min-width: 1920px) {
   header {
     .return-home {

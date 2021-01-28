@@ -1,10 +1,4 @@
-.delay-seconds {
-  animation-delay: 1s;
-}
-.delay-seconds {
-  animation-delay: 1000ms;
-}
-
+/* Propriétés de l'écran de chargement (page d'accueil) */
 .loading-screen {
   display: flex;
   flex-direction: column;
@@ -19,8 +13,22 @@
   animation: loading-screen-anim 500ms $loading-screen-delay both;
 }
 
-/* Animation de la sélection d'un plat sur la page des menus */
+/* Propriétés du spinner de chargement (page d'accueil) */
+.spinner {
+  height: 10vw;
+  width: 10vw;
+  border: 5px solid $primary-color;
+  border-top-color: $secondary-color;
+  border-radius: 100%;
+  animation: spinner-rotation 0.7s infinite ease 0.25s;
+}
 
+/* Propriété du logo de l'écran de chargement (page d'accueil) */
+.loading-logo {
+  font-family: "Shrikhand";
+}
+
+/* Animation de la sélection d'un plat sur la page des menus */
 .menu-categories {
   .menu-block {
     &:hover .checkbox {

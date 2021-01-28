@@ -1,3 +1,4 @@
+/* Keyframes de l'animation de disparition de l'écran de chargement (page d'accueil) */
 @keyframes loading-screen-anim {
   0% {
     opacity: 1;
@@ -9,6 +10,7 @@
   }
 }
 
+/* Keyframes de l'animation du spinner de chargement (page d'accueil) */
 @keyframes spinner-rotation {
   0% {
     transform: rotate(20deg);
@@ -21,6 +23,7 @@
   }
 }
 
+/* Keyframes de l'animation de l'apparition progressive des plats (page menus) */
 @keyframes slide-up {
   0% {
     opacity: 0;
@@ -32,6 +35,7 @@
   }
 }
 
+/* Keyframes de l'animation de la rotation de la checkbox (page menus) */
 @keyframes checkbox-rotatein {
   0% {
     transform: rotate(0deg);
@@ -50,6 +54,7 @@
   }
 }
 
+/* Keyframes de l'animation de la rotation du bouton retour (page menus) */
 @keyframes return-rotation {
   0% {
     transform: rotate(0deg);}
